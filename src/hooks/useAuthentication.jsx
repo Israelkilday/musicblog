@@ -9,8 +9,11 @@ import {
 } from "firebase/auth"
 // HOOKS
 import { useState, useEffect } from "react";
+// CONTEXT
+// import { useFirebase } from "../context/FirebaseContext";
 
 export const useAuthentication = () => {
+    // const { db } = useFirebase();    
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
 
@@ -83,11 +86,14 @@ export const useAuthentication = () => {
             await signInWithEmailAndPassword(auth, data.email, data.password);
             setLoading(false);
         } catch (error) {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            
             let systemErrorMessage;
 
-            if (error.message.includes("user-not-found")) {
+            if (errorCode === "auth/user-not-found") {
                 systemErrorMessage = "Usuário não encontrado.";
-            } else if (error.message.includes("wrong-password")) {
+            } else if (errorCode ==="auth/wrong-password") {
                 systemErrorMessage = "Senha incorreta.";
             } else {
                 systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde."

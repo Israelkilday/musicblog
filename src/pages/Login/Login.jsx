@@ -73,11 +73,3 @@ const Login = () => {
 export default Login;
 
 
-
-
-// "dependencies": {
-//   "firebase": "^10.5.0",
-//   "react": "^18.2.0",
-//   "react-dom": "^18.2.0",
-//   "react-router-dom": "^6.17.0"
-// }

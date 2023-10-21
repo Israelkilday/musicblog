@@ -4,7 +4,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 // FIREBASE
 import { onAuthStateChanged } from "firebase/auth";
-// HOOKS
+// HOOKS 
 import { useAuthentication } from "./hooks/useAuthentication";
 import { useState, useEffect } from "react";
 // PAGES
@@ -18,9 +18,11 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 // CONTEXT
+// import { FirebaseProvider } from "./context/FirebaseContext";
 import { AuthProvider } from "./context/AuthContext";
 
 function App() {
+  
   const [user, setUser] = useState(undefined);
 
   const { auth } = useAuthentication();
@@ -39,36 +41,37 @@ function App() {
 
   return (
     <>
-      <AuthProvider value={{ user }}>
-        <BrowserRouter>
-          <Navbar />
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route
-                path="/login"
-                element={!user ? <Login /> : <Navigate to="/" />}
-              />
-              <Route
-                path="/register"
-                element={!user ? <Register /> : <Navigate to="/" />}
-              />
-              <Route
-                path="/posts/create"
-                element={user ? <CreatePost /> : <Navigate to="/login" />}
-              />
-              <Route
-                path="/dashboard"
-                element={user ? <Dashboard /> : <Navigate to="/login" />}
-              />
-            </Routes>
-          </div>
+      {/* <FirebaseProvider> */}
+        <AuthProvider value={{ user }}>
+          <BrowserRouter>
+            <Navbar />
+            <div className="container">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route
+                  path="/login"
+                  element={!user ? <Login /> : <Navigate to="/" />}
+                />
+                <Route
+                  path="/register"
+                  element={!user ? <Register /> : <Navigate to="/" />}
+                />
+                <Route
+                  path="/posts/create"
+                  element={user ? <CreatePost /> : <Navigate to="/login" />}
+                />
+                <Route
+                  path="/dashboard"
+                  element={user ? <Dashboard /> : <Navigate to="/login" />}
+                />
+              </Routes>
+            </div>
 
-          <Footer />
-        </BrowserRouter>
-      </AuthProvider>
-
+            <Footer />
+          </BrowserRouter>
+        </AuthProvider>
+      {/* </FirebaseProvider> */}
     </>
   )
 }
