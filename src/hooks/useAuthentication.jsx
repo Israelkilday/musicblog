@@ -1,5 +1,8 @@
 // FIREBASE
-import { db } from "../firebase/config";
+// import { db } from "../firebase/config";
+// import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+// import { auth } from "../../firebase/config";
+
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -77,32 +80,32 @@ export const useAuthentication = () => {
     }
 
     // LOGIN - SIGN IN
-    const login = async (data) => {
-        checkIfIsCancelled();
-        setLoading(true);
-        setError(false); 
+    // const login = async (data) => {
+    //     checkIfIsCancelled();
+    //     setLoading(true);
+    //     setError(false); 
 
-        try {
-            await signInWithEmailAndPassword(auth, data.email, data.password);
-            setLoading(false);
-        } catch (error) {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            
-            let systemErrorMessage;
+    //     try {
+    //         await signInWithEmailAndPassword(auth, data.email, data.password);
+    //         setLoading(false);
+    //     } catch (error) {
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
 
-            if (errorCode === "auth/user-not-found") {
-                systemErrorMessage = "Usuário não encontrado.";
-            } else if (errorCode ==="auth/wrong-password") {
-                systemErrorMessage = "Senha incorreta.";
-            } else {
-                systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde."
-            }
+    //         let systemErrorMessage;
 
-            setError(systemErrorMessage);
-            setLoading(false);
-        };
-    };
+    //         if (errorCode === "auth/user-not-found") {
+    //             systemErrorMessage = "Usuário não encontrado.";
+    //         } else if (errorCode ==="auth/wrong-password") {
+    //             systemErrorMessage = "Senha incorreta.";
+    //         } else {
+    //             systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde."
+    //         }
+
+    //         setError(systemErrorMessage);
+    //         setLoading(false);
+    //     };
+    // };
 
     useEffect(() => {
         return () => setCancelled(true);
@@ -114,7 +117,7 @@ export const useAuthentication = () => {
         error,
         loading,
         logout,
-        login,
+        // login,
     };
 };
 
