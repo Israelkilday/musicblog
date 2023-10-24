@@ -1,8 +1,5 @@
 // FIREBASE
-// import { db } from "../firebase/config";
-// import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-// import { auth } from "../../firebase/config";
-
+import { db } from "../firebase/config";
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -12,11 +9,8 @@ import {
 } from "firebase/auth"
 // HOOKS
 import { useState, useEffect } from "react";
-// CONTEXT
-// import { useFirebase } from "../context/FirebaseContext";
 
 export const useAuthentication = () => {
-    // const { db } = useFirebase();    
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
 
@@ -26,7 +20,7 @@ export const useAuthentication = () => {
 
     const auth = getAuth();
 
-    function checkIfIsCancelled() {
+    function checkIfCancelled() {
         if (cancelled) {
             return;
         };
@@ -34,7 +28,7 @@ export const useAuthentication = () => {
 
     // REGISTER
     const createUser = async (data) => {
-        checkIfIsCancelled();
+        checkIfCancelled();
         setLoading(true);
         setError(null);
 
@@ -75,37 +69,35 @@ export const useAuthentication = () => {
 
     // LOGOUT -SIGN OUT
     const logout = () => {
-        checkIfIsCancelled();
+        checkIfCancelled();
         signOut(auth);
     }
 
     // LOGIN - SIGN IN
-    // const login = async (data) => {
-    //     checkIfIsCancelled();
-    //     setLoading(true);
-    //     setError(false); 
-
-    //     try {
-    //         await signInWithEmailAndPassword(auth, data.email, data.password);
-    //         setLoading(false);
-    //     } catch (error) {
-    //         const errorCode = error.code;
-    //         const errorMessage = error.message;
-
-    //         let systemErrorMessage;
-
-    //         if (errorCode === "auth/user-not-found") {
-    //             systemErrorMessage = "Usuário não encontrado.";
-    //         } else if (errorCode ==="auth/wrong-password") {
-    //             systemErrorMessage = "Senha incorreta.";
-    //         } else {
-    //             systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde."
-    //         }
-
-    //         setError(systemErrorMessage);
-    //         setLoading(false);
-    //     };
-    // };
+    const login = async (data) => {
+        checkIfCancelled();
+     
+        setLoading(true);
+        setError(false);
+     
+        try {
+          await signInWithEmailAndPassword(auth, data.email, data.password);
+          setLoading(false);
+        } catch (error) {
+          let systemErrorMessage;
+     
+          if (error.message.includes("user-not-found")) {
+            systemErrorMessage = "Usuário não encontrado";
+          } else if (error.message.includes("wrong-password")) {
+            systemErrorMessage = "Senha incorreta";
+          } else {
+            systemErrorMessage = "Ocorreu um erro, por favor, tente mais tarde.";
+          }
+     
+          setError(systemErrorMessage);
+          setLoading(false);
+        }
+      };
 
     useEffect(() => {
         return () => setCancelled(true);
@@ -117,7 +109,7 @@ export const useAuthentication = () => {
         error,
         loading,
         logout,
-        // login,
+        login,
     };
 };
 

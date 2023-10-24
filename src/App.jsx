@@ -18,7 +18,6 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 // CONTEXT
-// import { FirebaseProvider } from "./context/FirebaseContext";
 import { AuthProvider } from "./context/AuthContext";
 
 function App() {
@@ -41,7 +40,6 @@ function App() {
 
   return (
     <>
-      {/* <FirebaseProvider> */}
         <AuthProvider value={{ user }}>
           <BrowserRouter>
             <Navbar />
@@ -71,7 +69,6 @@ function App() {
             <Footer />
           </BrowserRouter>
         </AuthProvider>
-      {/* </FirebaseProvider> */}
     </>
   )
 }

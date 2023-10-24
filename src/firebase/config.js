@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
-// import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyArOJY24NOJXr2U0a1kQliX2ln3N-3luuQ",
@@ -13,8 +12,14 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-export const auth = getAuth(app);
 
-// const db = getFirestore(app);
+const db = getFirestore(app);
 
-// export { db };
+export { db };
+
+// "dependencies": {
+//     "firebase": "^10.5.0",
+//     "react": "^18.2.0",
+//     "react-dom": "^18.2.0",
+//     "react-firebase-hooks": "^5.1.1",
+//     "react-router-dom": "^6.17.0"

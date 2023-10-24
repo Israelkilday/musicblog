@@ -4,8 +4,8 @@ import styles from "./Register.module.css"
 import { useState, useEffect } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
 
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from "../../firebase/config";
+// import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+// import { auth } from "../../firebase/config";
 
 
 const Register = () => {
