@@ -4,43 +4,7 @@ import styles from "./Register.module.css"
 import { useState, useEffect } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
 
-// import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-// import { auth } from "../../firebase/config";
-
-
 const Register = () => {
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    // const [displayName, setDisplayName] = useState("");
-    // const [confirmPassword, setConfirmPassword] = useState("");
-    // const [error, setError] = useState("");
-
-    // // const { createUser, error: authError } = useAuthentication();
-
-    // const [
-    //     createUserWithEmailAndPassword,
-    //     user,
-    //     loading,
-    //     // error,
-        
-    // ] = useCreateUserWithEmailAndPassword(auth);
-
-    // function handleSubmit(e) {
-    //     e.preventDefault();
-    //     createUserWithEmailAndPassword(email, password);
-
-    //     const user = {
-    //         displayName,
-    //     }
-
-    //     if (password !== confirmPassword) {
-    //                 setError("As senhas precisam ser iguais!")
-    //                 return
-    //             }
-
-
-    // }
-
     const [displayName, setDisplayName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

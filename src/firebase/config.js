@@ -17,9 +17,3 @@ const db = getFirestore(app);
 
 export { db };
 
-// "dependencies": {
-//     "firebase": "^10.5.0",
-//     "react": "^18.2.0",
-//     "react-dom": "^18.2.0",
-//     "react-firebase-hooks": "^5.1.1",
-//     "react-router-dom": "^6.17.0"
