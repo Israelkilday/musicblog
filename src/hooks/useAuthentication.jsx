@@ -84,9 +84,15 @@ export const useAuthentication = () => {
           await signInWithEmailAndPassword(auth, data.email, data.password);
           setLoading(false);
         } catch (error) {
+            console.log(error.message);
+            console.log(typeof error.message);
+            console.log(error.message.includes("user-not"));
+
           let systemErrorMessage;
-     
-          if (error.message.includes("user-not-found")) {
+          console.log(error);      //sugestão do professor
+
+        //   if (error.message.includes("user-not-found")) {
+          if (error.message.includes("invalid-login-credentials")) { //mensagem de erro correta para exebir este erro 
             systemErrorMessage = "Usuário não encontrado";
           } else if (error.message.includes("wrong-password")) {
             systemErrorMessage = "Senha incorreta";
