@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 // HOOKS
 import { useAuthentication } from "../hooks/useAuthentication";
 // CONTEXT
-import { useaAuthValue } from "../context/AuthContext";
+import { userAuthValue } from "../context/AuthContext";
 
 const Navbar = () => {
-    const { user } = useaAuthValue();
+    const { user } = userAuthValue();
     
     const { logout } = useAuthentication();
 

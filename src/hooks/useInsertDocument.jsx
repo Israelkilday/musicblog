@@ -1,6 +1,6 @@
-import { useState, useEffect, useReducer } from "react"
-import { db } from "../firebase/config"
-import { collection, addDoc, Timestamp } from "firebase/firestore"
+import { useState, useEffect, useReducer } from "react";
+import { db } from "../firebase/config";
+import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 const initialState = {
     loading: null,
@@ -10,11 +10,11 @@ const initialState = {
 const insertReducer = (state, action) => {
     switch (action.type) {
         case "LOADING":
-            return { loading: true, error: null }
+            return { loading: true, error: null };
         case "INSERTED_DOC":
-            return { loading: false, error: null }
+            return { loading: false, error: null };
         case "ERROR":
-            return { loading: false, error: action.payload }
+            return { loading: false, error: action.payload };
         default:
             return state;
     }
@@ -22,36 +22,37 @@ const insertReducer = (state, action) => {
 }
 
 export const useInsertDocument = (docCollection) => {
-    const [response, dispatch] = useReducer(insertReducer, initialState)
+    const [response, dispatch] = useReducer(insertReducer, initialState);
 
     // deal memory leak
     const [cancelled, setCancelled] = useState(false);
 
-    const checkCamcelBeforedispatch = (action) => {
+    const checkCancelBeforeDispatch = (action) => {
         if (!cancelled) {
             dispatch(action)
         }
-    }
+    };
 
     const insertDocument = async (document) => {
-        checkCamcelBeforedispatch({
-            type: "LOADING",
-        })
+        checkCancelBeforeDispatch({
+            type: "LOADING"
+        });
 
         try {
-            const newDocument = { ...document, createdAt: Timestamp.now() }
+            const newDocument = { ...document, createdAt: Timestamp.now() };
 
             const insertedDocument = await addDoc(
                 collection(db, docCollection),
                 newDocument
             )
 
-            checkCamcelBeforedispatch({
-                type: "INSERT_DOC",
-                payload: insertedDocument
+            checkCancelBeforeDispatch({
+                // type: "INSERT_DOC",
+                type: "INSERTED_DOC",
+                payload: insertedDocument,
             });
         } catch (error) {
-            checkCamcelBeforedispatch({
+            checkCancelBeforeDispatch({
                 type: "ERROR",
                 payload: error.message,
             });

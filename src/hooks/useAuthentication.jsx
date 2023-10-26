@@ -89,13 +89,12 @@ export const useAuthentication = () => {
             console.log(error.message.includes("user-not"));
 
           let systemErrorMessage;
-          console.log(error);      //sugestão do professor
+          console.log(error);      
 
-        //   if (error.message.includes("user-not-found")) {
-          if (error.message.includes("invalid-login-credentials")) { //mensagem de erro correta para exebir este erro 
-            systemErrorMessage = "Usuário não encontrado";
-          } else if (error.message.includes("wrong-password")) {
-            systemErrorMessage = "Senha incorreta";
+          if (error.message.includes("invalid-login-credentials")) { 
+            systemErrorMessage = "Usuário ou senha estão incorretos";
+        //   }  else if (error.message.includes("wrong-password")) {
+        //     systemErrorMessage = "Senha incorreta";
           } else {
             systemErrorMessage = "Ocorreu um erro, por favor, tente mais tarde.";
           }

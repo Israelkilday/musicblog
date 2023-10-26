@@ -2,25 +2,63 @@
 import styles from "./CreatePost.module.css"
 // HOOKS
 import { useState } from "react";
+import { useInsertDocument } from "../../hooks/useInsertDocument";
 // REACT-ROUTER-DOM
-import { Navigate } from "react-router-dom";
-// cONTEXT
-import { useaAuthValue } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+// CONTEXT
+import { userAuthValue } from "../../context/AuthContext";
 
 const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [body, setBody] = useState("");
-  const [tags, Settags] = useState("");
-  const [formError, setFormError] = useState([]);
+  const [tags, setTags] = useState([]);
+  const [formError, setFormError] = useState("");
+
+
+  const { user } = userAuthValue();
+
+  const { insertDocument, response } = useInsertDocument("posts");
+
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormError("");
+
+    // validate image URL
+    try {
+      new URL(image);
+    } catch (error) {
+      setFormError("A imagem precisa ser uma URL.");
+    }
+
+    // criar  user.uido array de tags
+    const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
+
+    // checar toodos os valores
+    if (!title || !image || !tags || !body) {
+      setFormError("Por favor preencha todos os campos!");
+    }
+
+    if (formError) return;
+
+    insertDocument({
+      title,
+      image,
+      body,
+      tagsArray,
+      uid: user.uid,
+      createdBy: user.displayName,
+    })
+
+    // redirect to home page
+    navigate("/");
   }
-  
+
   return (
     <div className={styles.create_post}>
-      <h2>Createpost</h2>
+      <h2>Criar Post</h2>
       <p>Escreva o que quiser e compartilhe seu conhecimento!</p>
 
       <form onSubmit={handleSubmit}>
@@ -49,7 +87,7 @@ const CreatePost = () => {
         <label>
           <span>Conteúdo</span>
           <textarea
-            name=""
+            name="body"
             required
             placeholder="Insira o conteúdo do post"
             onChange={(e) => setBody(e.target.value)}
@@ -64,21 +102,22 @@ const CreatePost = () => {
             type="text"
             name="tags"
             placeholder="Insira as tags separados por vírgula"
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={(e) => setTags(e.target.value)}
             value={tags}
           />
         </label>
 
-        <button className="btn">Cadastrar</button>
-        {/* {!loading && <button className="btn">Cadastrar</button>}
+        {!response.loading && <button className="btn">Criar Post!</button>}
 
-                {loading && (
-                    <button className="btn" disabled>
-                        Aguarde...
-                    </button>
-                )}
+        {response.loading && (
+          <button className="btn" disabled>
+            Aguarde...
+          </button>
+        )}
 
-                {error && <p className="error">{error}</p>} */}
+        {(response.error || formError) && (
+          <p className="error">{response.error || formError}</p>
+        )}
       </form>
     </div>
   )
