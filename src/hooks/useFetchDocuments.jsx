@@ -8,7 +8,7 @@ import {
     where,
 } from "firebase/firestore";
 
-export const useFetchDocument = (docCollection, search = null, uid = null) => {
+export const useFetchDocuments = (docCollection, search = null, uid = null) => {
     const [documents, setDocuments] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
@@ -30,7 +30,7 @@ export const useFetchDocument = (docCollection, search = null, uid = null) => {
                 // busca
                 // dashboard
 
-                q = await query(collection, orderBy("createdAt", "desc"));
+                q = await query(collectionRef, orderBy("createdAt", "desc"));
 
                 await onSnapshot(q, (querySnapshot) => {
                     setDocuments(

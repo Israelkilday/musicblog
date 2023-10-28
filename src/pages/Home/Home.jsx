@@ -4,11 +4,12 @@ import styles from "./Home.module.css";
 import { Link, useNavigate } from "react-router-dom";
 // HOOKS
 import { useState } from "react";
+import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 // COMPONENTS
 
 const Home = () => {
   const [query, setQuery] = useState("");
-  const [posts] = useState([]);
+  const {documents: posts, loading} = useFetchDocuments("posts");
 
   const handlSubmit = (e) => {
     e.prventDefault();
@@ -22,11 +23,15 @@ const Home = () => {
         <input type="text" placeholder="Ou busque por tags..."
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button className="btn btn-dark">Pesquisar</button>
+        <button className="btn btn_dark">Pesquisar</button>
       </form>
 
       <div>
-        <h1>Posts...</h1>
+        {loading && <p>Carregando...</p>}
+
+        {posts && posts.map((post) => (
+          <h3>{post.title}</h3>
+        ))}
 
         {posts && posts.length === 0 &&(
           <div className={styles.noposts}>
