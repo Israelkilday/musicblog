@@ -6,13 +6,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 // COMPONENTS
+import PostDetail from "../../components/PostDetail";
 
 const Home = () => {
   const [query, setQuery] = useState("");
-  const {documents: posts, loading} = useFetchDocuments("posts");
+  const { documents: posts, loading } = useFetchDocuments("posts");
+
+  const navigate = useNavigate();
 
   const handlSubmit = (e) => {
     e.prventDefault();
+
+    if (query) {
+      return navigate(`/search?q=${query}`);
+    }
   }
 
   return (
@@ -29,11 +36,9 @@ const Home = () => {
       <div>
         {loading && <p>Carregando...</p>}
 
-        {posts && posts.map((post) => (
-          <h3>{post.title}</h3>
-        ))}
+        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
 
-        {posts && posts.length === 0 &&(
+        {posts && posts.length === 0 && (
           <div className={styles.noposts}>
             <p>Não foram encontrados posts</p>
             <Link to="/posts/create" className="btn">
