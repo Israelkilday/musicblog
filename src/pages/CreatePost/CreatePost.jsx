@@ -33,7 +33,7 @@ const CreatePost = () => {
       setFormError("A imagem precisa ser uma URL.");
     }
 
-    // criar  user.uido array de tags
+    // criar  user.uid array de tags
     const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
 
     // checar toodos os valores

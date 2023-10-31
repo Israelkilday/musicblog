@@ -14,7 +14,7 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  const handlSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.prventDefault();
 
     if (query) {
@@ -22,17 +22,20 @@ const Home = () => {
     }
   }
 
+
   return (
     <div className={styles.home}>
       <h1>Veja os nossos posts mais recents</h1>
 
-      <form onSubmit={handlSubmit} className={styles.search_form}>
-        <input type="text" placeholder="Ou busque por tags..."
+      <form onSubmit={handleSubmit} className={styles.search_form}>
+        <input
+          type="text"
+          placeholder="Ou busque por tags..."
           onChange={(e) => setQuery(e.target.value)}
         />
         <button className="btn btn_dark">Pesquisar</button>
       </form>
-
+      
       <div>
         {loading && <p>Carregando...</p>}
 
