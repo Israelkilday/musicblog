@@ -6,11 +6,14 @@ import { useQuery } from "../../hooks/useQuery";
 // COMPONENTS
 import PostDetail from "../../components/PostDetail";
 // REACT-ROUTER-DOM
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const Search = () => {
-  const query = useQuery();
-  const search = query.get("q");
+  // const query = useQuery();
+  // const search = query.get("q");
+
+  const [params] = useSearchParams();
+  const search = params.get("q");
 
   const { documents: posts } = useFetchDocuments("posts", search);
 
@@ -27,10 +30,12 @@ const Search = () => {
           </div>
         )}
         
-        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)};
+        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
       </div>
     </div>
   );
 };
 
 export default Search;
+
+

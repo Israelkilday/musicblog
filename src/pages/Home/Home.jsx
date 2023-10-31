@@ -15,7 +15,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.prventDefault();
+    e.preventDefault();
 
     if (query) {
       return navigate(`/search?q=${query}`);
@@ -55,3 +55,6 @@ const Home = () => {
 }
 
 export default Home;
+
+
+
