@@ -12,7 +12,7 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
     const [documents, setDocuments] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
-
+    
     // deal memory leak
     const [cancelled, setCancelled] = useState(false);
 
@@ -57,9 +57,7 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
         }
 
         loadData();
-    }, [docCollection, search, uid, cancelled])
-
-    console.log(documents);
+    }, [docCollection, documents, search, uid, cancelled])
 
     useEffect(() => {
         return () => setCancelled(true);
