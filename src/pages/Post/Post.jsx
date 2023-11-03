@@ -23,7 +23,6 @@ const Post = () => {
                         {post.tagsArray.map((tag) => (
                             <p key={tag}><span>#</span>{tag}</p>
                         ))}
-
                     </div>
                 </>
             )}

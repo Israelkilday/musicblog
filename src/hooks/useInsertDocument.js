@@ -18,7 +18,6 @@ const insertReducer = (state, action) => {
         default:
             return state;
     }
-
 }
 
 export const useInsertDocument = (docCollection) => {
