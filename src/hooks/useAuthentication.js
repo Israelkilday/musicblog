@@ -93,8 +93,6 @@ export const useAuthentication = () => {
 
           if (error.message.includes("invalid-login-credentials")) { 
             systemErrorMessage = "Usuário ou senha estão incorretos";
-        //   }  else if (error.message.includes("wrong-password")) {
-        //     systemErrorMessage = "Senha incorreta";
           } else {
             systemErrorMessage = "Ocorreu um erro, por favor, tente mais tarde.";
           }
