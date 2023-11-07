@@ -15,15 +15,11 @@
     background-color: rgba(246, 252, 255, 0.5);
 }
 
-.navbar {
-    /* font-size: 1.7rem; */
-    /* color: var(--text_color); */
-    /* margin-left: 4rem; */
-    /* transition: .3s; */
-    position: relative;
-}
+ /* .navbar {
+    display: flex;
+}  */
 
-.navbar::before {
+.header::before {
     content: " ";
     position: absolute;
     top: 0;
@@ -37,6 +33,9 @@
 
 .brand {
     font-size: 1.2em;
+    font-weight: 600;
+    cursor: default;
+    /* position: absolute; */
 }
 
 .brand span {
@@ -65,17 +64,16 @@
 #menu_icon {
     font-size: 3.6rem;
     color: #000; 
-    display: block;
 }
 
 .btn_menu {
-    /* border: 0px; */
+    border: none;
+    display: none;
     background: none;
     cursor: pointer;
-    display: block;
-    height: 3.2rem;
+    height: 2em;
     position: relative;
-    width: 2.4rem;
+    width: 2.4em;
 }
 
 .btn_menu .bar {
@@ -88,7 +86,17 @@
     width: 28px;
 }
 
+/* <========== breakpoints ==========> */
 
+@media (max-width: 768px) {
+    .header {
+        /* padding: 2em 3%; */
+    }
+
+    .btn_menu {
+        display: block;
+    }
+  }
 
 
 

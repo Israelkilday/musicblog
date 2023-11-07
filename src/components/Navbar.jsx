@@ -13,12 +13,12 @@ const Navbar = () => {
     const { logout } = useAuthentication();
 
     return (
-        <div className={styles.header}>
-            <nav className={styles.navbar}>
-                <NavLink to="/" className={styles.brand}>
-                    Mini <span>Blog</span>
-                </NavLink>
+        <header className={styles.header}>
+            <NavLink to="/" className={styles.brand}>
+                Mini <span>Blog</span>
+            </NavLink>
 
+            <nav className={styles.navbar}>
                 <ul className={styles.links_list}>
                     <li>
                         <NavLink
@@ -85,7 +85,7 @@ const Navbar = () => {
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
             </button>
-        </div>
+        </header>
     );
 };
 
