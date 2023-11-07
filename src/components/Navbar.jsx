@@ -4,6 +4,7 @@ import styles from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 // HOOKS
 import { useAuthentication } from "../hooks/useAuthentication";
+import { useAnimationMenu } from "../hooks/useAnimationMenu";
 // CONTEXT
 import { userAuthValue } from "../context/AuthContext";
 
@@ -12,6 +13,8 @@ const Navbar = () => {
 
     const { logout } = useAuthentication();
 
+    const { handleClickButton, showMenu } = useAnimationMenu();
+
     return (
         <header className={styles.header}>
             <NavLink to="/" className={styles.brand}>
@@ -19,8 +22,8 @@ const Navbar = () => {
             </NavLink>
 
             <nav className={styles.navbar}>
-                <ul className={styles.links_list}>
-                    <li>
+                <ul className={`${styles.links_list} ${showMenu ? styles.active : ""}`}>
+                    <li className={`${styles.active_menu} ${showMenu ? styles.animation_menu : ""} style={{ "--i": 0 }`}>
                         <NavLink
                             to="/"
                             className={({ isActive }) => (isActive ? styles.active : "")}
@@ -31,13 +34,14 @@ const Navbar = () => {
 
                     {!user && (
                         <>
-                            <li>
+                            <li className={styles.active_menu} style={{ "--i": 1 }}>
                                 <NavLink to="/login"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
                                 >Entrar
                                 </NavLink>
                             </li>
-                            <li>
+
+                            <li className={styles.active_menu} style={{ "--i": 2 }}>
                                 <NavLink to="/register"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
                                 >Cadastrar
@@ -48,13 +52,14 @@ const Navbar = () => {
 
                     {user && (
                         <>
-                            <li>
+                            <li className={styles.active_menu} style={{ "--i": 1 }}>
                                 <NavLink to="/posts/create"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
                                 >Novo Post
                                 </NavLink>
                             </li>
-                            <li>
+
+                            <li className={styles.active_menu} style={{ "--i": 2 }}>
                                 <NavLink to="/dashboard"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
                                 >Dashboard
@@ -63,7 +68,7 @@ const Navbar = () => {
                         </>
                     )}
 
-                    <li>
+                    <li className={styles.active_menu} style={{ "--i": 3 }}>
                         <NavLink
                             to="/about"
                             className={({ isActive }) => (isActive ? styles.active : "")}
@@ -73,14 +78,14 @@ const Navbar = () => {
                     </li>
 
                     {user && (
-                        <li>
+                        <li className={styles.active_menu} style={{ "--i": 4 }}>
                             <button onClick={logout}> Sair</button>
                         </li>
                     )}
                 </ul>
             </nav>
-
-            <button id="menu_icon" className={styles.btn_menu}>
+                
+            <button onClick={handleClickButton} id="menu_icon" className={styles.btn_menu}>
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
