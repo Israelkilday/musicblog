@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const { logout } = useAuthentication();
 
-    const { handleClickButton, showMenu } = useAnimationMenu();
+    const { handleClickButton, handleLinkClick, showMenu } = useAnimationMenu();
 
     return (
         <header className={styles.header}>
@@ -23,7 +23,12 @@ const Navbar = () => {
 
             <nav className={styles.navbar}>
                 <ul className={`${styles.links_list} ${showMenu ? styles.active : ""}`}>
-                    <li className={`${styles.active_menu} ${showMenu ? styles.animation_menu : ""} style={{ "--i": 0 }`}>
+                    <li
+                        onClick={handleLinkClick}
+                        className={`${styles.active_menu}
+                                    ${showMenu ? styles.animation_menu : ""}`}
+                        style={{ "--i": 0 }}
+                    >
                         <NavLink
                             to="/"
                             className={({ isActive }) => (isActive ? styles.active : "")}
@@ -34,17 +39,28 @@ const Navbar = () => {
 
                     {!user && (
                         <>
-                            <li className={styles.active_menu} style={{ "--i": 1 }}>
+                            <li
+                                onClick={handleLinkClick}
+                                className={`${styles.active_menu}
+                                            ${showMenu ? styles.animation_menu : ""}`}
+                                style={{ "--i": 1 }}
+                            >
                                 <NavLink to="/login"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
-                                >Entrar
+                                >
+                                    Entrar
                                 </NavLink>
                             </li>
 
-                            <li className={styles.active_menu} style={{ "--i": 2 }}>
+                            <li onClick={handleLinkClick}
+                                className={`${styles.active_menu}
+                                            ${showMenu ? styles.animation_menu : ""}`}
+                                style={{ "--i": 2 }}
+                            >
                                 <NavLink to="/register"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
-                                >Cadastrar
+                                >
+                                    Cadastrar
                                 </NavLink>
                             </li>
                         </>
@@ -52,23 +68,37 @@ const Navbar = () => {
 
                     {user && (
                         <>
-                            <li className={styles.active_menu} style={{ "--i": 1 }}>
+                            <li onClick={handleLinkClick}
+                                className={`${styles.active_menu}
+                                            ${showMenu ? styles.animation_menu : ""}`}
+                                style={{ "--i": 1 }}
+                            >
                                 <NavLink to="/posts/create"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
-                                >Novo Post
+                                >
+                                    Novo Post
                                 </NavLink>
                             </li>
 
-                            <li className={styles.active_menu} style={{ "--i": 2 }}>
+                            <li onClick={handleLinkClick}
+                                className={`${styles.active_menu}
+                                            ${showMenu ? styles.animation_menu : ""}`}
+                                style={{ "--i": 2 }}
+                            >
                                 <NavLink to="/dashboard"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
-                                >Dashboard
+                                >
+                                    Dashboard
                                 </NavLink>
                             </li>
                         </>
                     )}
 
-                    <li className={styles.active_menu} style={{ "--i": 3 }}>
+                    <li onClick={handleLinkClick}
+                        className={`${styles.active_menu}
+                                    ${showMenu ? styles.animation_menu : ""}`}
+                        style={{ "--i": 3 }}
+                    >
                         <NavLink
                             to="/about"
                             className={({ isActive }) => (isActive ? styles.active : "")}
@@ -78,14 +108,21 @@ const Navbar = () => {
                     </li>
 
                     {user && (
-                        <li className={styles.active_menu} style={{ "--i": 4 }}>
-                            <button onClick={logout}> Sair</button>
+                        <li className={`${styles.active_menu}
+                            ${showMenu ? styles.animation_menu : ""}`}
+                            style={{ "--i": 4 }}
+                        >
+                            <button onClick={logout}>Sair</button>
                         </li>
                     )}
                 </ul>
             </nav>
-                
-            <button onClick={handleClickButton} id="menu_icon" className={styles.btn_menu}>
+
+            <button
+                onClick={handleClickButton}
+                className={`${styles.btn_menu}
+                ${showMenu ? styles.active : ""}`}
+            >
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>

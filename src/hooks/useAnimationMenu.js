@@ -7,6 +7,10 @@ export const useAnimationMenu = () => {
         setShowMenu(!showMenu);
     }
 
-    return { handleClickButton, showMenu };
+    const handleLinkClick = () => {
+        setShowMenu(false);
+    }
+
+    return { handleClickButton, handleLinkClick, showMenu };
 
 }
