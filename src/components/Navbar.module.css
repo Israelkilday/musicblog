@@ -15,10 +15,6 @@
     background-color: rgba(246, 252, 255, 0.5);
 }
 
- /* .navbar {
-    display: flex;
-}  */
-
 .header::before {
     content: " ";
     position: absolute;
@@ -35,7 +31,6 @@
     font-size: 1.2em;
     font-weight: 600;
     cursor: default;
-    /* position: absolute; */
 }
 
 .brand span {
@@ -146,9 +141,6 @@
         opacity: 1;
         transition-delay: calc(.20s * var(--i));
         transform: translateY(0);
-    }
-
-    .links_list li button {
     }
   }
 
