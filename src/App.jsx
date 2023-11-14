@@ -12,7 +12,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import CreatePost from './pages/CreatePost/Createpost';
+import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Search from './pages/Search/Search';
 import Post from './pages/Post/Post';
