@@ -1,3 +1,8 @@
+/* .footer_container {
+    position: relative;
+    width: 100%;
+} */
+
 .footer {
     height: 130px;
     width: 100%;
@@ -6,9 +11,9 @@
     align-items: center;
     justify-content: center;
     background-color: #edf3f6;
-    position: fixed;
+    /* position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 0; */
+    /* right: 0; */
 }
 
