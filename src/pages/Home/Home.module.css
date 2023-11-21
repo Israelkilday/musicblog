@@ -33,3 +33,10 @@
 .noposts a {
     padding: 10px 25px;
 }
+
+/* <========== breakpoints ==========> */
+@media (max-width: 991px) {
+    .home {
+        padding: 5em 3% 2em;
+    }
+}

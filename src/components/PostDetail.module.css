@@ -30,3 +30,13 @@
     font-size:  0.8em;
     margin-bottom: 1em;    
 }
+
+/* <========== breakpoints ==========> */
+@media (max-width: 768px) {
+    .post_detail img {
+        width: 40vh;
+    }
+  }; 
+
+
+

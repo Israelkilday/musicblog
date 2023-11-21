@@ -24,7 +24,7 @@ const Post = () => {
                             <p key={tag}><span>#</span>{tag}</p>
                         ))}
                     </div>
-                </>
+                </> 
             )}
         </div>
     );

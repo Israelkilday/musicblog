@@ -23,3 +23,10 @@
 .tags span {
     font-weight: bold;
 }
+
+/* <========== breakpoints ==========> */
+@media (max-width: 768px) {
+    
+  } 
+
+

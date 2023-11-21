@@ -22,7 +22,6 @@ const Home = () => {
     }
   }
 
-
   return (
     <div className={styles.home}>
       <h1>Veja os nossos posts mais recents</h1>

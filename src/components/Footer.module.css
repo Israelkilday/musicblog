@@ -6,19 +6,21 @@
     align-items: center;
     justify-content: center;
     background-color: #edf3f6;
+    gap: 1em;
 }
 
 /* <========== breakpoints ==========> */
 
 @media (max-width: 1200px) {
     html {
-        font-size: 55%;
+        font-size: 75%;
     }
 } 
 
 @media (max-width: 991px) {
     .footer {
         padding: 2em 3%;
+        height: 100px;
     }
 }
 
