@@ -95,7 +95,7 @@
     .btn_menu.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(405deg);
     }
-
+   
     .btn_menu.active .bar:nth-child(2) {
         opacity: 0;
     }
