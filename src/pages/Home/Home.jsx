@@ -24,13 +24,13 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-      <h1>Veja os nossos posts mais recents</h1>
+      <h1>Veja os nossos posts mais recents!</h1>
 
       <form onSubmit={handleSubmit} className={styles.search_form}>
         <input
           type="text"
           placeholder="Ou busque por tags..."
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => setQuery(e.target.value.toLocaleLowerCase())}
         />
         <button className="btn btn_dark">Pesquisar</button>
       </form>

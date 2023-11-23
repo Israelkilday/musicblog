@@ -6,7 +6,8 @@
 }
 
 .home h1 {
-    margin-bottom: 2em;
+    margin-bottom:  2em;
+    
 }
 
 .search_form {
@@ -44,7 +45,7 @@
 @media (max-width: 768px) {
     h1 {
         text-align: center;
-    }   
+    }
 }
 
 @media (max-width: 460px) {
@@ -55,6 +56,6 @@
 
     .search_form input {
         width: 100%;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
     }
 }

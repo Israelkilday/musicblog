@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.post_container h1, img {
+.post_container h1, img, p, h3 {
     margin-bottom: 1em;
 }
 
@@ -11,19 +11,10 @@
     max-height: 500px;
 }
 
-.post_container p {
-    margin-bottom: 1em;
-    font-size: 1.2em;
-}
-
-.post_container h3 {
-    font-size: 1.3em;
-    margin-bottom: 1em;
-}
-
 .post_container .tags {
     display: flex;
     justify-content: center;
+    gap: 0.5em;
 }
 
 .tags span {
@@ -36,17 +27,19 @@
     .post_container img {
         width: 55vh;
     }
+
+    .post_container p {
+        margin-bottom: 1em;
+    }
+    
+    .post_container h3 {
+        font-size: 1.3em;
+    }
   } 
 
   @media (max-width: 460px) {
     .post_container img {
         width: 45vh;
-    }
-
-    .post_container p {
-        text-align: center;
-        /* max-width: 100%; */
-        /* margin: auto; */
     }
   }
 
