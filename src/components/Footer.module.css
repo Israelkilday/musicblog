@@ -6,7 +6,12 @@
     align-items: center;
     justify-content: center;
     background-color: #edf3f6;
-    gap: 1em;
+    gap: 0.8em;
+}
+
+.footer h3 {
+    padding-top: 1em;
+    /* margin-top: 1em; */
 }
 
 /* <========== breakpoints ==========> */
