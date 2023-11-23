@@ -3,11 +3,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .home h1 {
     margin-bottom:  2em;
-    
 }
 
 .search_form {
@@ -38,7 +38,7 @@
 /* <========== breakpoints ==========> */
 @media (max-width: 991px) {
     .home {
-        padding: 5em 3% 2em;
+        padding: 3em 3% 2em;
     }
 }
 
