@@ -27,7 +27,7 @@
 .created_by {
     font-style: italic;
     color: #444;
-    font-size:  0.8em;
+    font-size:  1em;
     margin-bottom: 1em;    
 }
 
@@ -36,13 +36,13 @@
     .post_detail img {
         width: 55vh;
     }
-}; 
+} 
 
 @media (max-width: 460px) {
     .post_detail img {
-        width: 40vh;
+        width: 45vh;
     }
-};
+}
 
 
 
