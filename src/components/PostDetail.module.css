@@ -42,6 +42,14 @@
     .post_detail img {
         width: 45vh;
     }
+
+    .tags p {
+        font-size: 1.2em;
+    }
+
+    .created_by {
+        font-size: 1.1em;
+    }
 }
 
 

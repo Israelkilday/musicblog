@@ -2,8 +2,8 @@
     text-align: center;
 }
 
-.post_container h3 {
-    margin-bottom: 0.2em;
+.post_container h1, img, p, h3 {
+    margin-bottom: 1em;
 }
 
 .post_container img {
@@ -16,17 +16,27 @@
     justify-content: center;
 }
 
-.tags p {
-    margin-right: 1em;
-}
-
 .tags span {
     font-weight: bold;
 }
 
 /* <========== breakpoints ==========> */
+
 @media (max-width: 768px) {
-    
+    .post_container img {
+        width: 55vh;
+    }
   } 
 
+  @media (max-width: 460px) {
+    .post_container img {
+        width: 40vh;
+    }
+
+    .post_container p {
+        text-align: center;
+        max-width: 100%;
+        margin: auto;
+    }
+  }
 
