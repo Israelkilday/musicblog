@@ -2,13 +2,23 @@
     text-align: center;
 }
 
-.post_container h1, img, p, h3 {
+.post_container h1, img {
     margin-bottom: 1em;
 }
 
 .post_container img {
     max-width: 600px;
     max-height: 500px;
+}
+
+.post_container p {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+.post_container h3 {
+    font-size: 1.3em;
+    margin-bottom: 1em;
 }
 
 .post_container .tags {
@@ -30,7 +40,7 @@
 
   @media (max-width: 460px) {
     .post_container img {
-        width: 40vh;
+        width: 45vh;
     }
 
     .post_container p {
