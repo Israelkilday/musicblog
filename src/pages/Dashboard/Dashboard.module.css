@@ -57,3 +57,14 @@
     width: 100px;
     font-size: 0.7em;
 }
+
+/* <========== breakpoints ==========> */
+@media (max-width: 768px) {
+.post_row button,
+.post_row a {
+    margin: 0 5px;
+    height: 30px;
+    width: 100px;
+    font-size: 0.7em;
+}       
+  }

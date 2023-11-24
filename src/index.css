@@ -84,6 +84,7 @@ textarea {
   border: none;
   padding: 10px 15px;
   font-size: 1em;
+  margin-top: 1em;
 }
 
 .btn.btn_dark {
@@ -128,6 +129,11 @@ button[disabled] {
 @media (max-width: 768px) {
   html {
       font-size: 75%;
+  }
+
+  .btn {
+    font-size: 1.2em;
+    width: 100%;
   }
 }
 

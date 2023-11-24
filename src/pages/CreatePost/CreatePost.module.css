@@ -4,9 +4,24 @@
 
 .create_post h2 {
     font-size: 2.2em;
+    margin-bottom: 1em;
 } 
 
 .create_post p {
-    color: #aaa;
     margin-bottom: 2em;
 }
+
+/* <========== breakpoints ==========> */
+@media (max-width: 768px) {
+    .create_post p {
+        font-size: 1.2em;
+    }
+
+    span {
+        font-size: 1.1em;
+    }
+  }
+  
+  @media (max-width: 460px) {
+      
+  }

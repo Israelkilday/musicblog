@@ -45,7 +45,6 @@ function App() {
     <>
         <AuthProvider value={{ user }}>
           <BrowserRouter>
-          
             <Navbar />
             <div className="container">
               <Routes>
