@@ -21,7 +21,11 @@
 
 @media (max-width: 768px) {
     .search_container {
-        min-height: 300px;
-    }    
+        min-height: 50vh;
+    }
+    
+    .noposts p {
+        font-size: 1.3em;
+    }
 }
 

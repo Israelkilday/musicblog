@@ -21,7 +21,7 @@ const Navbar = () => {
                 Mini <span>Blog</span>
             </NavLink>
 
-            <nav className={styles.navbar}>
+            <nav>
                 <ul className={`${styles.links_list} ${showMenu ? styles.active : ""}`}>
                     <li
                         onClick={handleLinkClick}

@@ -29,6 +29,7 @@ const Home = () => {
       <form onSubmit={handleSubmit} className={styles.search_form}>
         <input
           type="text"
+          required
           placeholder="Ou busque por tags..."
           onChange={(e) => setQuery(e.target.value.toLocaleLowerCase())}
         />

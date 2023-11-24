@@ -6,13 +6,8 @@
   outline: none;
 }
 
-/* #root {
-  width: 100%;
-} */
-
 html {
   overflow-x: hidden;
-  /* width: 100%; */
 }
 
 body {
@@ -37,6 +32,7 @@ nav button {
   text-decoration: none;
   background-color: transparent;
   border: none;
+  /* border-radius: 10px; */
   color: #000;
   transition: .4s;
   font-size: 1em;
@@ -92,7 +88,7 @@ textarea {
 
 .btn.btn_dark {
   background-color: #000;
-  border-radius: 0;
+  border-radius: 10px;
 }
 
 .btn.btn_outline {
@@ -133,7 +129,14 @@ button[disabled] {
   html {
       font-size: 75%;
   }
-} 
+}
+
+@media (max-width: 460px) {
+  form {
+    max-width: 80%;
+    margin: 0 auto;
+  }  
+}
 
 
 
