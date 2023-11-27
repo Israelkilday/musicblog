@@ -97,7 +97,7 @@ const EditPost = () => {
                             <input
                                 type="text"
                                 name="image"
-                                placeholder="Insira uma imagem que representa o seu post"
+                                placeholder="Insira a imagem que representa o seu post"
                                 onChange={(e) => setImage(e.target.value)}
                                 value={image}
                             />

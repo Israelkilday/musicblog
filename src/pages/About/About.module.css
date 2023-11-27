@@ -5,12 +5,14 @@
 }
 
 .about p {
+    margin: 5%;
     color: #aaa;
     margin-bottom: 2em;
+    text-align: center;
 }
 
 .about a {
-    display: block;
+    width: auto;
     margin-top: 15px;
     padding: 10px 15px;
 }
