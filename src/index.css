@@ -6,14 +6,20 @@
   outline: none;
 }
 
+:root {
+  --color_primary_text: #ff5300;
+}
+
 html {
   overflow-x: hidden;
 }
 
 body {
-  background-color: #f6fcff;
+  /* background-color: #f6fcff; */
+  background-color: #161616;
   font-family: 'Montserrat', sans-serif;
   width: 100%;  
+  color: var(--color_primary_text);
 }
 
 input::placeholder,
@@ -32,8 +38,8 @@ nav button {
   text-decoration: none;
   background-color: transparent;
   border: none;
-  /* border-radius: 10px; */
-  color: #000;
+  /* color: #000; */
+  color: #ff791c;
   transition: .4s;
   font-size: 1em;
   cursor: pointer;
@@ -43,7 +49,8 @@ nav button {
 
 a:hover,
 nav button:hover {
-  color: #bbb
+  /* color: #bbb */
+  color: #ffab5d
 }
 
 /* FORM STYLE */
@@ -71,11 +78,14 @@ textarea {
   border-bottom: 1px solid;
   padding: .8em 0;
   background-color: transparent;
+  color: #ff791c;
 }
 
 .btn {
-  background-color: #1a8918;
-  color: #fff;
+  /* background-color: #1a8918; */
+  background-color: #ff791c;
+  /* color: #fff; */
+  color: #000;
   text-align: center;
   cursor: pointer;
   border-radius: 10px;
@@ -123,6 +133,7 @@ button[disabled] {
   border: 1px solid #f5c6cb;
   padding: 5px;
   border-radius: 5px;
+  margin-top: 1.5em;
 }
 
 /* <========== breakpoints ==========> */
@@ -130,17 +141,17 @@ button[disabled] {
   html {
       font-size: 75%;
   }
-
-  .btn {
-    font-size: 1.2em;
-    width: 100%;
-  }
 }
 
 @media (max-width: 550px) {
   .btn.btn_outline {
     padding: 6px 10px;
-  } 
+  }
+  
+  .btn {
+    font-size: 1.2em;
+    width: 100%;
+  }
 }
 
 @media (max-width: 460px) {

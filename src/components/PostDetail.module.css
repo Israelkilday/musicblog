@@ -34,13 +34,13 @@
 /* <========== breakpoints ==========> */
 @media (max-width: 768px) {
     .post_detail img {
-        width: 55vh;
+        width: 50vw;
     }
 } 
 
 @media (max-width: 460px) {
     .post_detail img {
-        width: 45vh;
+        width: 85vw;
     }
 
     .tags p {

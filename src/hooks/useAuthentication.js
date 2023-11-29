@@ -83,6 +83,7 @@ export const useAuthentication = () => {
         try {
           await signInWithEmailAndPassword(auth, data.email, data.password);
           setLoading(false);
+          
         } catch (error) {
             console.log(error.message);
             console.log(typeof error.message);
@@ -100,7 +101,7 @@ export const useAuthentication = () => {
           setError(systemErrorMessage);
           setLoading(false);
         }
-      };
+    };
 
     useEffect(() => {
         return () => setCancelled(true);
