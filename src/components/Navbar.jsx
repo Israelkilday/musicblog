@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <header className={styles.header}>
             <NavLink to="/" className={styles.brand}>
-                Mini <span>Blog</span>
+                Music <span>Blog</span>
             </NavLink>
 
             <nav>

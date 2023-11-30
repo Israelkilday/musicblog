@@ -7,7 +7,8 @@
 }
 
 :root {
-  --color_primary_text: #ff5300;
+  --color_primary_text: #fffe00;
+  /* --color_primary_text: #fff; */
 }
 
 html {
@@ -39,7 +40,7 @@ nav button {
   background-color: transparent;
   border: none;
   /* color: #000; */
-  color: #ff791c;
+  color: #fffe00;;
   transition: .4s;
   font-size: 1em;
   cursor: pointer;
@@ -50,7 +51,7 @@ nav button {
 a:hover,
 nav button:hover {
   /* color: #bbb */
-  color: #ffab5d
+  color: #f6ffbc
 }
 
 /* FORM STYLE */
@@ -78,12 +79,12 @@ textarea {
   border-bottom: 1px solid;
   padding: .8em 0;
   background-color: transparent;
-  color: #ff791c;
+  color: #fff;
 }
 
 .btn {
   /* background-color: #1a8918; */
-  background-color: #ff791c;
+  background-color: #fffe00;
   /* color: #fff; */
   color: #000;
   text-align: center;
@@ -98,33 +99,44 @@ textarea {
 }
 
 .btn.btn_dark {
-  background-color: #000;
+  /* background-color: #000; */
+  background-color: transparent;
   border-radius: 10px;
+  border: 1px #f5ff31 solid;
+  color: #f5ff31;
+}
+
+.btn.btn.btn_dark:hover {
+  background-color: #492800;
+  color: #f5ff31;
 }
 
 .btn.btn_outline {
   background-color: transparent;
   border-radius: 0;
-  color: #000;
-  border: 1px solid #000;
+  color: #f5ff31;
+  border: 1px solid #f5ff31;
   padding: 7px 30px;
 }
 
 .btn:hover {
-  background-color: #0f730c;
-  color: #fff;
+  background-color: #f5ff31;
+  color: #492800;
 }
 
 .btn.btn_outline:hover {
-  background-color: #000;
+  background-color: #492800;
+  color: #f5ff31;
 }
 
 .btn.btn_danger:hover {
   background-color: #dc3545;
+  color: #fff;
 }
 
 button[disabled] {
-  background-color: #aaa;
+  background-color: #946100;
+  color: #f6ffbc;
 }
  
 .container .error {

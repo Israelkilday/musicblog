@@ -12,7 +12,8 @@
 }
 
 .dashboard p {
-    color: #aaa;
+    /* color: #aaa; */
+    color: #b47c00;
     margin-bottom: 1em;
 }
 
@@ -39,15 +40,19 @@
 .post_header {
     font-weight: bold;
     border-bottom: 2px solid #ccc;
+    /* border-bottom: 2px solid #f5ff31; */
 }
 
 .post_row {
     align-items: center;
     border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #f5ff31; */
 }
 
 .post_row p {
-    color: #000;
+    /* color: #000; */
+    color: var(--color_primary_text);
+
 }
 
 .post_row button,

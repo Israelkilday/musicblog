@@ -26,7 +26,8 @@
 
 .created_by {
     font-style: italic;
-    color: #444;
+    /* color: #444; */
+    color: #fff;
     font-size:  1em;
     margin-bottom: 1em;    
 }

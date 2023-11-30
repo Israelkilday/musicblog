@@ -2,17 +2,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 60%;
+    justify-content: center;
+    /* border: 1px var(--color_primary_text) solid; */
+    box-shadow: var(--color_primary_text) 0 0 .5em;
+    border-radius: 1em;
+    padding: 1.5em 1em;
+    margin: auto;
 }
 
 .about p {
     margin: 5%;
-    color: #aaa;
+    /* color: #aaa; */
+    color: #fff;
     margin-bottom: 2em;
     text-align: center;
+    line-height: 1.5;
+}
+
+.about .italic {
+    color: var(--color_primary_text);
 }
 
 .about a {
     width: auto;
     margin-top: 15px;
     padding: 10px 15px;
+}
+
+/* <=========== breakpoints ==========>*/
+
+@media (max-width: 600px) {
+    .about {
+        width: auto;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
 }
