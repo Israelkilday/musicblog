@@ -9,6 +9,10 @@
     margin-bottom: 1em;
 }
 
+.search_container .search {
+    color: #fff;
+}
+
 .search_container p {
     margin-bottom: 30px;
 }

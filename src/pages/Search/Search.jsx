@@ -16,11 +16,11 @@ const Search = () => {
 
   return (
     <div className={styles.search_container}>
-      <h2>Resultado para: {search}</h2>
+      <h2>Resultado para: <span className={styles.search}>{search}</span></h2>
       <div>
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>
-           <p>Não foram encontardos posts apartir da sua busca...</p>
+           <p className={styles.p_search}>Não foram encontardos posts apartir da sua busca...</p>
             <Link to="/" className="btn btn_dark">
               Voltar
             </Link>

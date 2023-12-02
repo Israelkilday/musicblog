@@ -1,13 +1,29 @@
 .about {
-    display: flex;
+    display: flex; 
     flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.about h2 {
+    margin-bottom: 1.5em;
+}
+
+.about span {
+    font-weight: 900;
+}
+
+
+
+.about_content {
     align-items: center;
     width: 60%;
     justify-content: center;
     /* border: 1px var(--color_primary_text) solid; */
     box-shadow: var(--color_primary_text) 0 0 .5em;
     border-radius: 1em;
-    padding: 1.5em 1em;
+    padding: 1em 1em;
     margin: auto;
 }
 
@@ -26,7 +42,7 @@
 
 .about a {
     width: auto;
-    margin-top: 15px;
+    margin-top: 2em;
     padding: 10px 15px;
 }
 

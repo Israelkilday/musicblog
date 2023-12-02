@@ -8,7 +8,6 @@
 
 :root {
   --color_primary_text: #fffe00;
-  /* --color_primary_text: #fff; */
 }
 
 html {
@@ -23,6 +22,11 @@ body {
   color: var(--color_primary_text);
 }
 
+  p {
+    color: #b47c00;
+  }
+  
+
 input::placeholder,
 textarea::placeholder {
   font-family: 'Montserrat', sans-serif;
@@ -34,6 +38,7 @@ textarea:focus {
   outline: none;
 }
 
+  
 a,
 nav button {
   text-decoration: none;
@@ -50,7 +55,6 @@ nav button {
 
 a:hover,
 nav button:hover {
-  /* color: #bbb */
   color: #f6ffbc
 }
 
@@ -84,7 +88,7 @@ textarea {
 
 .btn {
   /* background-color: #1a8918; */
-  background-color: #fffe00;
+  background-color: #ffe200;
   /* color: #fff; */
   color: #000;
   text-align: center;

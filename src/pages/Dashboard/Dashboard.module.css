@@ -44,6 +44,8 @@
 }
 
 .post_row {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     border-bottom: 1px solid #eee;
     /* border-bottom: 1px solid #f5ff31; */

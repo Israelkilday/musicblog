@@ -16,20 +16,23 @@
     display: flex;
 }
 
-.tags p {
-    margin-right: 0.5em;
-}
 
-.tags span {
-    font-weight: bold;
-}
 
 .created_by {
     font-style: italic;
     /* color: #444; */
-    color: #fff;
+    color: #b47c00;
     font-size:  1em;
     margin-bottom: 1em;    
+}
+
+.tags p {
+    margin-right: 0.5em;
+    color: #fff;
+}
+
+.tags span {
+    font-weight: bold;
 }
 
 /* <========== breakpoints ==========> */
