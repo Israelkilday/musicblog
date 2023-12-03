@@ -77,10 +77,6 @@
 /* <========== breakpoints ==========> */
 
 @media (max-width: 768px) {
-    /* .header {
-        padding: 2em 3%;
-    } */
-
     .btn_menu {
         display: block;
     }
@@ -119,7 +115,7 @@
     }
 
     .links_list.active {
-        height: 18em;
+        height: 19em;
         /* right: 0; */
     }
 
@@ -139,10 +135,13 @@
         transform: translateY(0);
     }
 
-    .links_list li a button {
-        padding: .4em .6em;
-        font-size: 1.2em;
+    .links_list a   {
+        font-size: 1.3em;
     }
+
+    .links_list button {
+        font-size: 1.3em;
+    }  
   }
 
   @media (max-width: 460px) {

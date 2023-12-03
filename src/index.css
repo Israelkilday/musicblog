@@ -162,6 +162,9 @@ button[disabled] {
 @media (max-width: 550px) {
   .btn.btn_outline {
     padding: 6px 10px;
+    width: auto;  
+    height: auto;
+
   }
   
   .btn {
@@ -177,11 +180,7 @@ button[disabled] {
   }  
 }
 
-@media (max-width: 360px) {
-  .btn.btn_outline {
-    padding: 4px 8px;
-  }
-}
+
 
 
 

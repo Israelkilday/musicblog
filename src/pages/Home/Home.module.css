@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    
 }
 
 .home h1 {
@@ -36,23 +36,35 @@
 }
 
 /* <========== breakpoints ==========> */
-@media (max-width: 991px) {
-    .home {
-        padding: 3em 3% 2em;
-    }
-}
 
 @media (max-width: 768px) {
+    .home {
+        margin: 0 20%;
+    }
+
     h1 {
         text-align: center;
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 768px) {
     .search_form {
         flex-direction: column;
         align-items: center;
     }
+}
+
+@media (max-width: 550px) {
+    .home {
+        margin: 0 2em;    
+    }
+}
+
+
+
+
+@media (max-width: 460px) {
+    
 
     .search_form input {
         width: 100%;

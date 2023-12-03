@@ -19,6 +19,16 @@
 }
 
 .edit_post .image_preview {
-    max-width: 100%;
+    max-width: 600px;
+    max-height: 500px;
     margin-bottom: 1em;
-}
+    border-radius: 15px;
+} 
+
+/* <========== breakpoints ==========> */
+
+    @media (max-width: 850px) {
+        .edit_post .image_preview {
+            width: 100%;
+        }
+    }

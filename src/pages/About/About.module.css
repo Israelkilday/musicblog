@@ -14,8 +14,6 @@
     font-weight: 900;
 }
 
-
-
 .about_content {
     align-items: center;
     width: 60%;
@@ -48,10 +46,14 @@
 
 /* <=========== breakpoints ==========>*/
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .about {
         width: auto;
         margin-left: 1.5em;
         margin-right: 1.5em;
+    }
+
+    .about_content {
+        width: auto;
     }
 }

@@ -4,6 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 60%;
+    margin: auto;
 }
 
 .dashboard h2 {
@@ -29,31 +31,39 @@
     padding: 10px 25px;
 }
 
-.post_header,
-.post_row {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    padding: 10px;    
-}
-
 .post_header {
     font-weight: bold;
     border-bottom: 2px solid #ccc;
     /* border-bottom: 2px solid #f5ff31; */
 }
 
+.post_header,
 .post_row {
+    /* align-items: center; */
     display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10px ;     
+}
+
+.post_header span {
+    margin: 0 7em ;
+}
+
+.post_row {
     flex-wrap: wrap;
-    align-items: center;
     border-bottom: 1px solid #eee;
     /* border-bottom: 1px solid #f5ff31; */
 }
 
 .post_row p {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
     /* color: #000; */
-    color: var(--color_primary_text);
+    color: var(--color
+    _primary_text);
+    /* margin-top: 1em; */
+    /* margin: auto; */
 
 }
 
@@ -61,20 +71,25 @@
 .post_row a {
     margin: 0 5px;
     height: 30px;
+    height: auto;
     width: 100px;
-    font-size: 0.8em;
+    width: auto;
+    font-size: 0.9em;
 }
 
-.post_row button {
+/* .post_row button {
     height: 31px;
-}
+} */
 
 /* <========== breakpoints ==========> */
 
-@media (max-width: 991px) {
-    .post_row button {
+@media (max-width: 768px) {
+    .dashboard {
         width: auto;
-        height: auto;
+    }
+    
+    .post_header span {
+        margin: auto;
     }
 }
 
@@ -84,14 +99,20 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+    .post_header,
+    .post_row {
+        width: 94%;
+    }
+
     .post_row p {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     .post_row button {
-        height: 25px;
-        font-size: 0.7em;
+        height: auto;
+        width: auto;
+        font-size: 0.9em;
     }
   }
 
