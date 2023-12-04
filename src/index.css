@@ -1,9 +1,9 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
   outline: none;
+  text-decoration: none;
 }
 
 :root {
@@ -15,22 +15,25 @@ html {
 }
 
 body {
-  /* background-color: #f6fcff; */
   background-color: #161616;
+  color: var(--color_primary_text);
   font-family: 'Montserrat', sans-serif;
   width: 100%;  
-  color: var(--color_primary_text);
 }
 
-  p {
+p {
     color: #b47c00;
-  }
-  
+    line-height: 1.4;
+}
 
+span {
+  font-weight: bold;
+}
+  
 input::placeholder,
 textarea::placeholder {
-  font-family: 'Montserrat', sans-serif;
   color: #aaa;
+  font-family: 'Montserrat', sans-serif;
 }
 
 input:focus,
@@ -38,19 +41,17 @@ textarea:focus {
   outline: none;
 }
 
-  
 a,
 nav button {
-  text-decoration: none;
   background-color: transparent;
   border: none;
-  /* color: #000; */
   color: #fffe00;;
-  transition: .4s;
-  font-size: 1em;
   cursor: pointer;
+  font-size: 1em;
   font-family: 'Montserrat', sans-serif; 
   font-weight: bold;
+  transition: .4s;
+  text-decoration: none;
 }
 
 a:hover,
@@ -71,8 +72,8 @@ label {
 }
 
 label span {
-  margin-bottom: .3em;
   font-weight: bold;
+  margin-bottom: .3em;
   text-align: left;
 }
 
@@ -81,29 +82,28 @@ textarea {
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid;
-  padding: .8em 0;
   background-color: transparent;
   color: #fff;
+  padding: .8em 0;
 }
 
+/* button style */
+
 .btn {
-  /* background-color: #1a8918; */
-  background-color: #ffe200;
-  /* color: #fff; */
-  color: #000;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 10px;
-  width: 120px;
-  font-weight: bold;
+  background-color: #e2b000;
   border: none;
-  padding: 10px 15px;
+  border-radius: 10px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
   font-size: 1em;
   margin-top: 1em;
+  padding: 10px 15px;
+  text-align: center;
+  width: 120px;
 }
 
 .btn.btn_dark {
-  /* background-color: #000; */
   background-color: transparent;
   border-radius: 10px;
   border: 1px #f5ff31 solid;
@@ -118,8 +118,8 @@ textarea {
 .btn.btn_outline {
   background-color: transparent;
   border-radius: 0;
-  color: #f5ff31;
   border: 1px solid #f5ff31;
+  color: #f5ff31;
   padding: 7px 30px;
 }
 
@@ -144,12 +144,12 @@ button[disabled] {
 }
  
 .container .error {
-  color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
-  padding: 5px;
   border-radius: 5px;
+  color: #721c24;
   margin-top: 1.5em;
+  padding: 5px;
 }
 
 /* <========== breakpoints ==========> */
@@ -161,10 +161,9 @@ button[disabled] {
 
 @media (max-width: 550px) {
   .btn.btn_outline {
+    height: auto;
     padding: 6px 10px;
     width: auto;  
-    height: auto;
-
   }
   
   .btn {

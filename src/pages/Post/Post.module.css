@@ -3,12 +3,12 @@
     margin: auto;
     justify-content: center;
     width: 60%;
+    font-size: 1.1em;
 }
 
 .post_container p {
     color: #fff;
     text-align: left;
-    /* margin: auto; */
 }
 
 .post_container h1, img, p, h3 {
@@ -28,10 +28,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5em;
-}
-
-.tags span {
-    font-weight: bold;
 }
 
 /* <========== breakpoints ==========> */
@@ -58,7 +54,7 @@
 
   @media (max-width: 460px) {
     .post_container img {
-        width: 60vw;
+        width: 90vw;
     }
   }
 

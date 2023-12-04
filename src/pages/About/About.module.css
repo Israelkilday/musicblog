@@ -1,9 +1,9 @@
 .about {
+    align-items: center;
     display: flex; 
     flex-direction: column;
-    margin: auto;
     justify-content: center;
-    align-items: center;
+    margin: auto;
 }
 
 .about h2 {
@@ -16,22 +16,20 @@
 
 .about_content {
     align-items: center;
-    width: 60%;
-    justify-content: center;
-    /* border: 1px var(--color_primary_text) solid; */
-    box-shadow: var(--color_primary_text) 0 0 .5em;
     border-radius: 1em;
-    padding: 1em 1em;
+    box-shadow: var(--color_primary_text) 0 0 .5em;
+    justify-content: center;
     margin: auto;
+    padding: 1em 1em;
+    width: 60%;
 }
 
 .about p {
-    margin: 5%;
-    /* color: #aaa; */
     color: #fff;
+    margin: 5%;
     margin-bottom: 2em;
-    text-align: center;
     line-height: 1.5;
+    text-align: center;
 }
 
 .about .italic {
@@ -39,18 +37,18 @@
 }
 
 .about a {
-    width: auto;
     margin-top: 2em;
     padding: 10px 15px;
+    width: auto;
 }
 
 /* <=========== breakpoints ==========>*/
 
 @media (max-width: 700px) {
     .about {
-        width: auto;
         margin-left: 1.5em;
         margin-right: 1.5em;
+        width: auto;
     }
 
     .about_content {

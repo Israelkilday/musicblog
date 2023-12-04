@@ -8,8 +8,8 @@
 } 
 
 .create_post p {
-    margin-bottom: 2em;
     color: #b47c00;
+    margin-bottom: 2em;
 }
 
 /* <========== breakpoints ==========> */
@@ -23,6 +23,4 @@
     }
   }
   
-  @media (max-width: 460px) {
-      
-  }
+  
