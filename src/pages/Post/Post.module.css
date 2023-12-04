@@ -21,6 +21,7 @@
     /* max-height: 500px; */
     max-height: 440px;
     border-radius: 15px;
+    box-shadow: 0 0 1em #333333;
 }
 
 .post_container .tags {
@@ -28,6 +29,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5em;
+    margin: 0 1em;
 }
 
 /* <========== breakpoints ==========> */

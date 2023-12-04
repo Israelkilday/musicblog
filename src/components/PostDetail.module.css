@@ -6,6 +6,7 @@
     border-radius: 15px;
     max-width: 600px;
     max-height: 500px;
+    box-shadow: 0 0 1em #333333;
 }
 
 .post_detail .tags {

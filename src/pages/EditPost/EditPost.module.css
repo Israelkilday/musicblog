@@ -23,6 +23,7 @@
     max-height: 500px;
     margin-bottom: 1em;
     border-radius: 15px;
+    box-shadow: 0 0 1em #333333;
 } 
 
 /* <========== breakpoints ==========> */

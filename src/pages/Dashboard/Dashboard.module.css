@@ -44,6 +44,7 @@
     width: 80%;
 }
 
+
 .post_header span {
     margin: 0 7em ;
 }
@@ -52,6 +53,14 @@
     border-bottom: 1px solid #eee;
     flex-wrap: wrap;
 }
+
+
+
+.post_row span {
+
+}
+
+
 
 .post_row button,
 .post_row a {

@@ -14,13 +14,21 @@ const Dashboard = () => {
 
   const { documents: posts, loading } = useFetchDocuments("posts", null, uid);
 
-  const {deleteDocument} = useDeleteDocument("posts");
+  const { deleteDocument } = useDeleteDocument("posts");
 
   if (loading) {
     return <p>Carregando...</p>
   }
 
   return (
+
+
+
+
+
+
+
+
     <div className={styles.dashboard}>
       <h2>Dashboard</h2>
       <p>Gerencie os seus posts</p>
@@ -40,30 +48,33 @@ const Dashboard = () => {
           </div>
 
           {posts &&
-           posts.map((post) => (
-            <div key={post.id} className={styles.post_row}>
-              <p>{post.title}</p>
-              <div>
-                <Link to={`/posts/${post.id}`} className="btn btn_outline">
-                  Ver
-                </Link>
+            posts.map((post) => (
+              <div key={post.id} className={styles.post_row}>
+                <div>
+                  <p>{post.title}</p>
+                </div>
 
-                <Link to={`/posts/edit/${post.id}`} className="btn btn_outline">
-                  Editar
-                </Link>
+                <div>
+                  <Link to={`/posts/${post.id}`} className="btn btn_outline">
+                    Ver
+                  </Link>
 
-                <button onClick={() => deleteDocument(post.id)}
-                  className="btn btn_outline btn_danger"
-                >
-                  Excluir
-                </button>
+                  <Link to={`/posts/edit/${post.id}`} className="btn btn_outline">
+                    Editar
+                  </Link>
+
+                  <button onClick={() => deleteDocument(post.id)}
+                    className="btn btn_outline btn_danger"
+                  >
+                    Excluir
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default Dashboard;
