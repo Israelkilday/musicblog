@@ -1,9 +1,9 @@
 .post_container {
-    text-align: center;
-    margin: auto;
-    justify-content: center;
-    width: 60%;
     font-size: 1.1em;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    width: 60%;
 }
 
 .post_container p {
@@ -11,24 +11,26 @@
     text-align: left;
 }
 
+.post_container .post_load {
+    color: #b47c00;
+}
+
 .post_container h1, img, p, h3 {
     margin-bottom: 1em;
 }
 
 .post_container img {
-    /* max-width: 600px; */
-    max-width: 540px;
-    /* max-height: 500px; */
-    max-height: 440px;
-    border-radius: 15px;
     box-shadow: 0 0 1em #333333;
+    border-radius: 15px;
+    max-width: 540px;
+    max-height: 440px;
 }
 
 .post_container .tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 0.5em;
+    justify-content: center;
     margin: 0 1em;
 }
 
@@ -40,6 +42,7 @@
     }
 
     .post_container p {
+        font-size: 1.1em;
         margin-bottom: 1em;
     }
     

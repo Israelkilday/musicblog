@@ -1,7 +1,7 @@
 .home {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;    
 }
 
@@ -10,11 +10,11 @@
 }
 
 .search_form {
-    max-width: 100%;
-    width: 60%;
     display: flex;
     justify-content: center;
+    max-width: 100%;
     margin-bottom: 2em;
+    width: 60%;
 }
 
 .search_form input {
@@ -48,8 +48,8 @@
 
 @media (max-width: 768px) {
     .search_form {
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
     }
 }
 
@@ -59,14 +59,9 @@
     }
 }
 
-
-
-
 @media (max-width: 460px) {
-    
-
     .search_form input {
-        width: 100%;
         margin-bottom: 2em;
+        width: 100%;
     }
 }

@@ -10,7 +10,7 @@ const Post = () => {
 
     return (
         <div className={styles.post_container}>
-            {loading && <p>Carregando Post...</p>}
+            {loading && <p className={styles.post_load}>Carregando Post...</p>}
 
             {post && (
                 <>
