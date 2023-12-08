@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { db } from "../firebase/config";
 import { doc, getDoc } from "firebase/firestore";
-    
-export const useFetchDocument = (docCollection, id) => {
-    const [document, setDocument] = useState(null);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(null);
+      
+export const useFetchDocument = (docCollection: string, id: string) => {
+    const [document, setDocument] = useState<any | null>(null);
+    const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean | null>(null);
 
     // deal memory leak
-    const [cancelled, setCancelled] = useState(false);
+    const [cancelled, setCancelled] = useState<boolean>(false);
 
     useEffect(() => {
         async function loadDocument() {
@@ -22,7 +22,7 @@ export const useFetchDocument = (docCollection, id) => {
 
                 setDocument(docSnap.data())
                 setLoading(false);
-            } catch (error) {
+            } catch (error: any) {
                 console.log(error);
                 setError(error.message);
                 setLoading(true);

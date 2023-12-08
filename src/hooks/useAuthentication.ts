@@ -1,18 +1,20 @@
 // FIREBASE
-import { db } from "../firebase/config";
+// import { db } from "../firebase/config";
 import {
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     updateProfile,
-    signOut
+    signOut,
 } from "firebase/auth"
 // HOOKS
 import { useState, useEffect } from "react";
 
 export const useAuthentication = () => {
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(null);
+    const [error, setError] = useState<string | null>(null);
+    
+    type LoadingState = null | boolean;
+    const [loading, setLoading] = useState<LoadingState>(null);
 
     // cleanup
     // deal with memory leak
@@ -26,8 +28,14 @@ export const useAuthentication = () => {
         };
     }
 
+    interface UserData {
+        email: string;
+        password: string;
+        displayName?: string
+    }
+
     // REGISTER
-    const createUser = async (data) => {
+    const createUser = async (data: UserData) => {
         checkIfCancelled();
         setLoading(true);
         setError(null);
@@ -43,11 +51,12 @@ export const useAuthentication = () => {
                 displayName: data.displayName
             })
 
-            setLoading(false);
+            // setLoading(false);
+            setLoading(null);
 
             return (user)
 
-        } catch (error) {
+        } catch (error: any) {
             console.log(error.message)
             console.log(typeof error.message)
 
@@ -62,29 +71,33 @@ export const useAuthentication = () => {
                 systemErrorMessage = "Ocorreu erro, por favor tente mais tarde."
             }
 
-            setLoading(false);
+            // setLoading(false);
+            setLoading(null);
             setError(systemErrorMessage);
+            
         };
     };
 
     // LOGOUT -SIGN OUT
-    const logout = () => {
+    const logout = (): void => {
         checkIfCancelled();
         signOut(auth);
     }
 
     // LOGIN - SIGN IN
-    const login = async (data) => {
+    const login = async (data: UserData): Promise<void> => {
         checkIfCancelled();
      
         setLoading(true);
-        setError(false);
+        // setError(false);
+        setError(null);
      
         try {
           await signInWithEmailAndPassword(auth, data.email, data.password);
-          setLoading(false);
+        //   setLoading(false);
+          setLoading(null);
           
-        } catch (error) {
+        } catch (error: any) {
             console.log(error.message);
             console.log(typeof error.message);
             console.log(error.message.includes("user-not"));
@@ -99,7 +112,8 @@ export const useAuthentication = () => {
           }
      
           setError(systemErrorMessage);
-          setLoading(false);
+        //   setLoading(false);
+          setLoading(null);
         }
     };
 
