@@ -2,12 +2,22 @@ import { useState, useEffect, useReducer } from "react";
 import { db } from "../firebase/config";
 import { updateDoc, doc } from "firebase/firestore";
 
-const initialState = {
+interface UpdateState {
+    loading: boolean | null;
+    error: string | null;
+}
+
+interface UpdateActions {
+    type: "LOADING" | "UPDATED_DOC" | "ERROR";
+    payload?: any | string;   
+}
+
+const initialState: UpdateState = {
     loading: null,
     error: null
 }
 
-const updateReducer = (state, action) => {
+const updateReducer = (state: UpdateState, action: UpdateActions): UpdateState => {
     switch (action.type) {
         case "LOADING":
             return { loading: true, error: null };
@@ -20,19 +30,19 @@ const updateReducer = (state, action) => {
     }
 }
 
-export const useUpdateDocument = (docCollection) => {
+export const useUpdateDocument = (docCollection: string) => {
     const [response, dispatch] = useReducer(updateReducer, initialState);
 
     // deal memory leak
-    const [cancelled, setCancelled] = useState(false);
+    const [cancelled, setCancelled] = useState<boolean>(false);
 
-    const checkCancelBeforeDispatch = (action) => {
+    const checkCancelBeforeDispatch = (action: UpdateActions) => {
         if (!cancelled) {
             dispatch(action)
         }
     };
 
-    const updateDocument = async (id, data) => {
+    const updateDocument = async (id: string, data: any | string) => {
         checkCancelBeforeDispatch({
             type: "LOADING"
         });
@@ -47,7 +57,7 @@ export const useUpdateDocument = (docCollection) => {
                 type: "UPDATED_DOC",
                 payload: updatedDocument,
             });
-        } catch (error) {
+        } catch (error: any | string) {
             checkCancelBeforeDispatch({
                 type: "ERROR",
                 payload: error.message,

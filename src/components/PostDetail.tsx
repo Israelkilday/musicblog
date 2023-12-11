@@ -3,7 +3,11 @@ import styles from "./PostDetail.module.css"
 // REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
 
-const PostDetail = ({ post }) => {
+interface PostDetailProps {
+  post: Post;
+}
+
+const PostDetail: React.FC<PostDetailProps> = ({ post }) => {
   return (
     <div className={styles.post_detail}>
       <img src={post.image} alt={post.title} />

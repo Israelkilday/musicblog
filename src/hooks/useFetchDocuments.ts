@@ -8,19 +8,35 @@ import {
     where,
 } from "firebase/firestore";
 
-export const useFetchDocuments = (docCollection, search = null, uid = null) => {
-    const [documents, setDocuments] = useState(null);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(null);
+interface FetchDocumentsProps {
+    docCollection: string;
+    search?: string | null;
+    uid?: string | null;
+}
+
+export const useFetchDocuments = (
+    { docCollection, search = null, uid = null }: FetchDocumentsProps) => {
+    const [documents, setDocuments] = useState<any[] | null>(null);
+    const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean | null>(null);
 
     // deal memory leak
-    const [cancelled, setCancelled] = useState(false);
+    const [cancelled, setCancelled] = useState<boolean>(false);
 
     useEffect(() => {
         async function loadData() {
             if (cancelled) return;
 
             setLoading(true);
+
+
+            // if (!docCollection) {
+            //     setLoading(false);
+            //     setError("O caminho da coleção não pode ser vazio.");
+            //     return;
+            // }
+
+            console.log("docCollection:", docCollection);
 
             const collectionRef = await collection(db, docCollection)
 
@@ -43,18 +59,18 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
                     q = await query(collectionRef, orderBy("createdAt", "desc"));
                 }
 
-                    await onSnapshot(q, (querySnapshot) => {
-                        setDocuments(
-                            querySnapshot.docs.map((doc) => ({
-                                id: doc.id,
-                                ...doc.data(),
-                            }))
-                        );
-                    });
+                await onSnapshot(q, (querySnapshot) => {
+                    setDocuments(
+                        querySnapshot.docs.map((doc) => ({
+                            id: doc.id,
+                            ...doc.data(),
+                        }))
+                    );
+                });
 
                 setLoading(false);
 
-            } catch (error) {
+            } catch (error: any | string) {
                 console.log(error);
                 setError(error.message);
 
@@ -70,4 +86,4 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
     }, []);
 
     return { documents, loading, error };
-}
+};

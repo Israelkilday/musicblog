@@ -11,7 +11,7 @@ interface DeleteAction {
     type: "LOADING" | "DELETE_DOC" | "ERROR" | "DELETED_DOC";
     payload?: any | string;
 }
-
+            
 const initialState: DeleteState = {
     loading: null,
     error: null
@@ -59,11 +59,7 @@ export const useDeleteDocument = (docCollection: string) => {
                 type: "DELETED_DOC",
                 payload: deletedDocument,
             });
-        } catch (error: any) {
-            // checkCancelBeforeDispatch({
-            //     type: "DELETED_DOC",
-            //     payload: deleteDocument,
-            // });
+        } catch (error: any | string) {
             checkCancelBeforeDispatch({ type: "ERROR", payload: error.message });
         }
     };
@@ -71,7 +67,6 @@ export const useDeleteDocument = (docCollection: string) => {
     useEffect(() => {
         return () => setCancelled(true);
     }, [])
-
 
     return { deleteDocument, response };
 };

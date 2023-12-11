@@ -12,7 +12,8 @@ const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [body, setBody] = useState("");
-  const [tags, setTags] = useState([]);
+  // const [tags, setTags] = useState([]);
+  const [tags, setTags] = useState("");
   const [formError, setFormError] = useState("");
 
 
@@ -22,7 +23,7 @@ const CreatePost = () => {
 
   const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormError("");
 
@@ -43,17 +44,20 @@ const CreatePost = () => {
 
     if (formError) return;
 
-    insertDocument({
-      title,
-      image,
-      body,
-      tagsArray,
-      uid: user.uid,
-      createdBy: user.displayName,
-    })
+    if (user !== null && typeof user === "object" && "uid" in user && "displayName" in user) {
+      insertDocument({
+        title,
+        image,
+        body,
+        tagsArray,
+        uid: user.uid,
+        createdBy: user.displayName,
+      });
 
-    // redirect to home page
-    navigate("/");
+      // redirect to home page
+      navigate("/");
+    }
+
   }
 
   return (

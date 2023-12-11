@@ -56,7 +56,7 @@ export const useAuthentication = () => {
 
             return (user)
 
-        } catch (error: any) {
+        } catch (error: any | string) {
             console.log(error.message)
             console.log(typeof error.message)
 
@@ -96,8 +96,8 @@ export const useAuthentication = () => {
           await signInWithEmailAndPassword(auth, data.email, data.password);
         //   setLoading(false);
           setLoading(null);
-          
-        } catch (error: any) {
+           
+        } catch (error: any | string) {
             console.log(error.message);
             console.log(typeof error.message);
             console.log(error.message.includes("user-not"));
@@ -105,8 +105,12 @@ export const useAuthentication = () => {
           let systemErrorMessage;
           console.log(error);      
 
-          if (error.message.includes("invalid-login-credentials")) { 
+          if (error.message.includes("auth/invalid-credential")) { 
             systemErrorMessage = "Usuário ou senha estão incorretos";
+
+          } else if (error.message.includes("auth/too-many-requests")) {
+            systemErrorMessage = "Varias tentativas de login malsucedidas. Por favor, tente novamente mais tarde"
+
           } else {
             systemErrorMessage = "Ocorreu um erro, por favor, tente mais tarde.";
           }

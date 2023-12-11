@@ -27,7 +27,7 @@ const Navbar = () => {
                         onClick={handleLinkClick}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
-                        style={{ "--i": 0 }}
+                        style={{ "--i": 0 } as React.CSSProperties}
                     >
                         <NavLink
                             to="/"
@@ -43,7 +43,7 @@ const Navbar = () => {
                                 onClick={handleLinkClick}
                                 className={`${styles.active_menu}
                                             ${showMenu ? styles.animation_menu : ""}`}
-                                style={{ "--i": 1 }}
+                                style={{ "--i": 1 } as React.CSSProperties}
                             >
                                 <NavLink to="/login"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
@@ -55,7 +55,7 @@ const Navbar = () => {
                             <li onClick={handleLinkClick}
                                 className={`${styles.active_menu}
                                             ${showMenu ? styles.animation_menu : ""}`}
-                                style={{ "--i": 2 }}
+                                style={{ "--i": 2 } as React.CSSProperties}
                             >
                                 <NavLink to="/register"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
@@ -71,7 +71,7 @@ const Navbar = () => {
                             <li onClick={handleLinkClick}
                                 className={`${styles.active_menu}
                                             ${showMenu ? styles.animation_menu : ""}`}
-                                style={{ "--i": 1 }}
+                                style={{ "--i": 1 } as React.CSSProperties}
                             >
                                 <NavLink to="/posts/create"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
@@ -83,7 +83,7 @@ const Navbar = () => {
                             <li onClick={handleLinkClick}
                                 className={`${styles.active_menu}
                                             ${showMenu ? styles.animation_menu : ""}`}
-                                style={{ "--i": 2 }}
+                                style={{ "--i": 2 } as React.CSSProperties}
                             >
                                 <NavLink to="/dashboard"
                                     className={({ isActive }) => (isActive ? styles.active : "")}
@@ -97,7 +97,7 @@ const Navbar = () => {
                     <li onClick={handleLinkClick}
                         className={`${styles.active_menu}
                                     ${showMenu ? styles.animation_menu : ""}`}
-                        style={{ "--i": 3 }}
+                        style={{ "--i": 3 } as React.CSSProperties}
                     >
                         <NavLink
                             to="/about"
@@ -110,7 +110,7 @@ const Navbar = () => {
                     {user && (
                         <li className={`${styles.active_menu}
                             ${showMenu ? styles.animation_menu : ""}`}
-                            style={{ "--i": 4 }}
+                            style={{ "--i": 4 } as React.CSSProperties}
                         >
                             <button onClick={logout}>Sair</button>
                         </li>
