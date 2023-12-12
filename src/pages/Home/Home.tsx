@@ -10,11 +10,11 @@ import PostDetail from "../../components/PostDetail";
 
 const Home = () => {
   const [query, setQuery] = useState("");
-  const { documents: posts, loading } = useFetchDocuments("posts");
+  const { documents: posts, loading } = useFetchDocuments({docCollection: "posts"});
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (query) {

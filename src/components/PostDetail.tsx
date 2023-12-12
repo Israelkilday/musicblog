@@ -4,7 +4,13 @@ import styles from "./PostDetail.module.css"
 import { Link } from "react-router-dom";
 
 interface PostDetailProps {
-  post: Post;
+  post: {
+    id: string;
+    title: string;
+    image: string;
+    createdBy: string;
+    tagsArray: string[];
+  }  
 }
 
 const PostDetail: React.FC<PostDetailProps> = ({ post }) => {

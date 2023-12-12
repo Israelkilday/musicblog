@@ -10,6 +10,11 @@ import {
 // HOOKS
 import { useState, useEffect } from "react";
 
+// interface User {
+//     uid: string;
+//     dispalyName: string;
+// }
+
 export const useAuthentication = () => {
     const [error, setError] = useState<string | null>(null);
     
@@ -32,6 +37,7 @@ export const useAuthentication = () => {
         email: string;
         password: string;
         displayName?: string
+        uid: string;
     }
 
     // REGISTER

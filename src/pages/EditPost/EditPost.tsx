@@ -11,12 +11,12 @@ import { userAuthValue } from "../../context/AuthContext";
 
 const EditPost = () => {
     const { id } = useParams();
-    const { document: post } = useFetchDocument("posts", id);
+    const { document: post } = useFetchDocument("posts", id || "");
 
     const [title, setTitle] = useState("");
     const [image, setImage] = useState("");
     const [body, setBody] = useState("");
-    const [tags, setTags] = useState([]);
+    const [tags, setTags] = useState("");
     const [formError, setFormError] = useState("");
 
     useEffect(() => {
@@ -37,7 +37,7 @@ const EditPost = () => {
 
     const navigate = useNavigate()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setFormError("");
 

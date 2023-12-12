@@ -44,7 +44,7 @@ const CreatePost = () => {
 
     if (formError) return;
 
-    if (user !== null && typeof user === "object" && "uid" in user && "displayName" in user) {
+    if (user !== null) {
       insertDocument({
         title,
         image,
@@ -53,11 +53,10 @@ const CreatePost = () => {
         uid: user.uid,
         createdBy: user.displayName,
       });
+    }
 
       // redirect to home page
       navigate("/");
-    }
-
   }
 
   return (

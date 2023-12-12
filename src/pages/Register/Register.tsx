@@ -4,16 +4,21 @@ import styles from "./Register.module.css"
 import { useState, useEffect } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
 
+// interface User {
+//     uid: string;
+//     displayName: string;
+// }
+
 const Register = () => {
-    const [displayName, setDisplayName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-    const [error, setError] = useState("");
+    const [displayName, setDisplayName] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [confirmPassword, setConfirmPassword] = useState<string>("");
+    const [error, setError] = useState<string | null>("");
 
     const { createUser, error: authError, loading } = useAuthentication();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setError("");
 

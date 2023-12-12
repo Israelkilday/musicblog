@@ -12,7 +12,7 @@ const Search = () => {
   const [params] = useSearchParams();
   const search = params.get("q");
 
-  const { documents: posts } = useFetchDocuments("posts", search);
+  const { documents: posts } = useFetchDocuments({docCollection: "posts", search});
 
   return (
     <div className={styles.search_container}>
