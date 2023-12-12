@@ -9,13 +9,12 @@ import { useNavigate } from "react-router-dom";
 import { userAuthValue } from "../../context/AuthContext";
 
 const CreatePost = () => {
-  const [title, setTitle] = useState("");
-  const [image, setImage] = useState("");
-  const [body, setBody] = useState("");
+  const [title, setTitle] = useState<string>("");
+  const [image, setImage] = useState<string>("");
+  const [body, setBody] = useState<string>("");
   // const [tags, setTags] = useState([]);
-  const [tags, setTags] = useState("");
-  const [formError, setFormError] = useState("");
-
+  const [tags, setTags] = useState<string>("");
+  const [formError, setFormError] = useState<string | null>("");
 
   const { user } = userAuthValue();
 
@@ -44,16 +43,15 @@ const CreatePost = () => {
 
     if (formError) return;
 
-    if (user !== null) {
+    
       insertDocument({
         title,
         image,
         body,
         tagsArray,
-        uid: user.uid,
-        createdBy: user.displayName,
+        uid: user?.uid || "",
+        createdBy: user?.displayName || "",
       });
-    }
 
       // redirect to home page
       navigate("/");

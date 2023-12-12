@@ -8,12 +8,16 @@ import { userAuthValue } from "../../context/AuthContext";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import { useDeleteDocument } from "../../hooks/useDeleteDocument";
 
+
+
+
 const Dashboard = () => {
-  const { user } = userAuthValue();
+  const { user} = userAuthValue();
+
   // const uid = user.uid
   const uid = user?.uid
 
-  const { documents: posts, loading } = useFetchDocuments("posts", null, uid);
+  const { documents: posts, loading } = useFetchDocuments({docCollection: "posts", search: null, uid});
 
   const { deleteDocument } = useDeleteDocument("posts");
 

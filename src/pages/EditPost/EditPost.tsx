@@ -63,11 +63,11 @@ const EditPost = () => {
             image,
             body,
             tagsArray,
-            uid: user.uid,
-            createdBy: user.displayName,
+            uid: user?.uid,
+            createdBy: user?.displayName,
         }
         
-        updateDocument(id, data);
+        updateDocument(id || "", data);
         
         // redirect to home page
         navigate("/dashboard");

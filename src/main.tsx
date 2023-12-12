@@ -1,13 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App from './App.js'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const rootElement = document.getElementById("root")!;
+
+const root = ReactDOM.createRoot(rootElement);
+
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
+);
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+// )
 
 
 // # Nome do Projeto
@@ -56,8 +66,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 // ### Criar um Post
 
-```jsx
-const createPost = async (postData) => {
-  // Lógica para criar um post no Firebase
-  // ...
-};
+// ```jsx
+// const createPost = async (postData) => {
+//   // Lógica para criar um post no Firebase
+//   // ...
+// // };

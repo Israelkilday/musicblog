@@ -5,7 +5,8 @@ import { useContext, createContext, ReactNode } from "react";
 // }
 
 interface AuthContextProps {
-    user: string | null;
+    // user: string | null;
+    user: {uid: string; displayName: string} | null;
 }
 
 const AuthContext = createContext<AuthContextProps>({user: null});
