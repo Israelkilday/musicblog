@@ -9,7 +9,7 @@ import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import PostDetail from "../../components/PostDetail";
 
 const Home = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState<string>("");
   const { documents: posts, loading } = useFetchDocuments({docCollection: "posts"});
 
   const navigate = useNavigate();
@@ -21,6 +21,8 @@ const Home = () => {
       return navigate(`/search?q=${query}`);
     }
   }
+  console.log("Posts:", posts);
+  console.log("Loading:", loading);
 
   return (
     <div className={styles.home}>
@@ -37,8 +39,7 @@ const Home = () => {
       </form>
       
       <div>
-        {loading && <p>Carregando...</p>}
-
+        {loading && <p>Carregando...</p> }
         {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
 
         {posts && posts.length === 0 && (
