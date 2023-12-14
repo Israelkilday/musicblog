@@ -30,6 +30,7 @@
  3. Configure o Firebase: Adicione suas credenciais.
  4. Inicie o servidor de desenvolvimento: `npm run dev`
  5. Abra o navegador e acesse `http://localhost:3000`
+ 6. Para facilitar o acesso faça login com o usuário: `usuarioTeste@email.com`, senha: `123456`
 
  ## 📁 Estrutura de Diretórios
 
@@ -72,7 +73,7 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 
 ## 🔗 Link do Projeto
 
-https://israelkilday.github.io/miniblog/
+https://musicblog-drab.vercel.app/
 
 ## 🧠 Autor
 
@@ -80,4 +81,4 @@ https://israelkilday.github.io/miniblog/
 
 israel.kilday@yahoo.com.br
 
- ### Criar um Post
+ ### Obrigado por visitar meu projeto! 👋 
