@@ -1,3 +1,4 @@
+// HOOK
 import { useState } from "react"
 
 interface AnimationMenuState {

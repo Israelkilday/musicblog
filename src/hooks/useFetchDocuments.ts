@@ -1,4 +1,6 @@
+// HOOKS
 import { useState, useEffect } from "react";
+// FIREBASE
 import { db } from "../firebase/config";
 import {
     collection,
@@ -30,12 +32,6 @@ export const useFetchDocuments = (
             setLoading(true);
 
             console.log("Starting data loading...");
-
-            // if (!docCollection) {
-            //     setLoading(false);
-            //     setError("O caminho da coleção não pode ser vazio.");
-            //     return;
-            // }
 
             console.log("docCollection:", docCollection);
 
@@ -81,11 +77,6 @@ export const useFetchDocuments = (
 
         loadData();
     }, [docCollection, search, uid, cancelled])
-
-    console.log("docCollection:", docCollection);
-    console.log("search:", search);
-    console.log("uid:", uid);
-
 
     useEffect(() => {
         return () => setCancelled(true);

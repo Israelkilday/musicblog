@@ -1,11 +1,7 @@
+// CONTEXT
 import { useContext, createContext, ReactNode } from "react";
 
-// interface AuthContextProps {
-//     value: any | string;
-// }
-
 interface AuthContextProps {
-    // user: string | null;
     user: {uid: string; displayName: string} | null;
 }
 

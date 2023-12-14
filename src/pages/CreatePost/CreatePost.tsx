@@ -12,7 +12,6 @@ const CreatePost = () => {
   const [title, setTitle] = useState<string>("");
   const [image, setImage] = useState<string>("");
   const [body, setBody] = useState<string>("");
-  // const [tags, setTags] = useState([]);
   const [tags, setTags] = useState<string>("");
   const [formError, setFormError] = useState<string | null>("");
 

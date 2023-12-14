@@ -23,15 +23,9 @@ import Footer from './components/Footer';
 // CONTEXT
 import { AuthProvider } from "./context/AuthContext";
 
-// interface User {
-//   uid: string;
-//   displayName: string;
-// }
-
 function App() {
   
   const [user, setUser] = useState(undefined);
-  // const [user, setUser] = useState<User | undefined>(undefined);
 
   const { auth } = useAuthentication();
 
@@ -40,7 +34,6 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setUser(user);
-      // setUser(user ? {uid: user.uid, displayName: user.displayName || ""}: undefined);
     });
   }, [auth]);
 

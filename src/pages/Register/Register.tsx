@@ -4,11 +4,6 @@ import styles from "./Register.module.css"
 import { useState, useEffect } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
 
-// interface User {
-//     uid: string;
-//     displayName: string;
-// }
-
 const Register = () => {
     const [displayName, setDisplayName] = useState<string>("");
     const [email, setEmail] = useState<string>("");

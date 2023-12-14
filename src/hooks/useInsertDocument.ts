@@ -1,4 +1,6 @@
+// HOOKS
 import { useState, useEffect, useReducer } from "react";
+// FIREBASE
 import { db } from "../firebase/config";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
@@ -51,14 +53,12 @@ export const useInsertDocument = (docCollection: string) => {
         }
     };
 
-    // const insertDocument = async (document: string[]) => {
     const insertDocument = async (DocumentData: DocumentData) => {
         checkCancelBeforeDispatch({
             type: "LOADING"
         });
 
         try {
-            // const newDocument = { ...document, createdAt: Timestamp.now() };
             const newDocument = { ...DocumentData, createdAt: Timestamp.now() };
 
             const insertedDocument = await addDoc(

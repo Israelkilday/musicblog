@@ -10,8 +10,8 @@ interface PostDetailProps {
     image: string;
     createdBy: string;
     tagsArray: string[];
-  }  
-}
+  };  
+};
 
 const PostDetail: React.FC<PostDetailProps> = ({ post }) => {
   return (

@@ -30,7 +30,6 @@ const EditPost = () => {
         }
     }, [post]);
 
-
     const { user } = userAuthValue();
 
     const { updateDocument, response } = useUpdateDocument("posts");

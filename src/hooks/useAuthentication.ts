@@ -1,5 +1,4 @@
 // FIREBASE
-// import { db } from "../firebase/config";
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -9,11 +8,6 @@ import {
 } from "firebase/auth"
 // HOOKS
 import { useState, useEffect } from "react";
-
-// interface User {
-//     uid: string;
-//     dispalyName: string;
-// }
 
 export const useAuthentication = () => {
     const [error, setError] = useState<string | null>(null);
@@ -37,7 +31,7 @@ export const useAuthentication = () => {
         email: string;
         password: string;
         displayName?: string
-        uid: string;
+        uid?: string;
     }
 
     // REGISTER
@@ -57,7 +51,6 @@ export const useAuthentication = () => {
                 displayName: data.displayName
             })
 
-            // setLoading(false);
             setLoading(null);
 
             return (user)
@@ -77,7 +70,6 @@ export const useAuthentication = () => {
                 systemErrorMessage = "Ocorreu erro, por favor tente mais tarde."
             }
 
-            // setLoading(false);
             setLoading(null);
             setError(systemErrorMessage);
             
@@ -95,12 +87,11 @@ export const useAuthentication = () => {
         checkIfCancelled();
      
         setLoading(true);
-        // setError(false);
         setError(null);
      
         try {
           await signInWithEmailAndPassword(auth, data.email, data.password);
-        //   setLoading(false);
+
           setLoading(null);
            
         } catch (error: any | string) {
@@ -109,6 +100,7 @@ export const useAuthentication = () => {
             console.log(error.message.includes("user-not"));
 
           let systemErrorMessage;
+
           console.log(error);      
 
           if (error.message.includes("auth/invalid-credential")) { 
@@ -122,7 +114,6 @@ export const useAuthentication = () => {
           }
      
           setError(systemErrorMessage);
-        //   setLoading(false);
           setLoading(null);
         }
     };
