@@ -17,8 +17,8 @@
 .about_content {
     align-items: center;
     border-radius: 1em;
-    box-shadow: #f2ff7c 0px -1px 5px 0px;
-    backdrop-filter: blur(10px);
+    box-shadow: #f2ff7c 0px 4px 5px 0px;
+    backdrop-filter: blur(30px);
     justify-content: center;
     margin: auto;
     padding: 1em 1em;

@@ -103,6 +103,11 @@ textarea {
   width: 120px;
 }
 
+.btn:hover {
+  background-color: #f5ff31;
+  color: #492800;
+}
+
 .btn.btn_dark {
   background-color: transparent;
   border-radius: 10px;
@@ -119,13 +124,9 @@ textarea {
   background-color: transparent;
   border-radius: 0;
   border: 1px solid #f5ff31;
+  border-radius: 5px;
   color: #f5ff31;
   padding: 7px 30px;
-}
-
-.btn:hover {
-  background-color: #f5ff31;
-  color: #492800;
 }
 
 .btn.btn_outline:hover {
