@@ -5,7 +5,9 @@
  qualquer estilo musical!
 
  ## 🎨 Layout 💻 && 📱 Mobile  
-                    
+
+https://github.com/Israelkilday/musicblog/assets/101229204/4c5c6199-1979-4ac8-9877-063d273e41c7
+ 
  ## ⚙️ Pré-requisitos
 
  - Node.js (v14.0.0 ou superior)
