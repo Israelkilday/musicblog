@@ -59,7 +59,7 @@ const CreatePost = () => {
   return (
     <div className={styles.create_post}>
       <h2>Criar Post</h2>
-      <p>Escreva o que quiser e compartilhe seu conhecimento!</p>
+      <p>Escreva e compartilhe sobre sua banda, artista ou musica favorita!</p>
 
       <form onSubmit={handleSubmit}>
         <label>
