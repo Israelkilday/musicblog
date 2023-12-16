@@ -1,7 +1,7 @@
 // CSS
 import styles from "./CreatePost.module.css"
 // HOOKS
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useInsertDocument } from "../../hooks/useInsertDocument";
 // REACT-ROUTER-DOM
 import { useNavigate } from "react-router-dom";
@@ -55,6 +55,16 @@ const CreatePost = () => {
       // redirect to home page
       navigate("/");
   }
+
+  useEffect(() => {
+    // Adicionar uma classe específica ao body quando o componente for montado
+    document.body.classList.add("create_post_body");
+
+    // Remover a classe quando o componente for desmontado
+    return () => {
+      document.body.classList.remove("create_post_body");
+    };
+  }, []);
 
   return (
     <div className={styles.create_post}>
