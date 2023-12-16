@@ -56,16 +56,6 @@ const CreatePost = () => {
       navigate("/");
   }
 
-  useEffect(() => {
-    // Adicionar uma classe específica ao body quando o componente for montado
-    document.body.classList.add("create_post_body");
-
-    // Remover a classe quando o componente for desmontado
-    return () => {
-      document.body.classList.remove("create_post_body");
-    };
-  }, []);
-
   return (
     <div className={styles.create_post}>
       <h2>Criar Post</h2>
