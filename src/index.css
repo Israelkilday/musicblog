@@ -78,9 +78,14 @@ nav button:hover {
 }
 
 /* FORM STYLE */
+
 form {
-  border-radius: 1em;
-  box-shadow: #f2ff7c 0px 2px 2px 0px;
+  border-radius: 10px;
+  box-shadow:
+   0px 2px 4px rgba(242, 255, 124, 0.7),
+   0px -2px 4px rgba(242, 255, 124, 0.7),
+   2px 0px 4px rgba(242, 255, 124, 0.7),
+   -2px 0px 4px rgba(242, 255, 124, 0.7);
   backdrop-filter: blur(30px);
   max-width: 40%;
   margin: 0 auto;
@@ -103,13 +108,18 @@ input,
 textarea {
   box-sizing: border-box;
   border: none;
+  border-radius: 5px;
   border-bottom: 1px solid;
   background-color: transparent;
   color: #fff;
   padding: .8em 0;
 }
 
-/* button style */
+ form  input::placeholder {
+  text-indent: .4em;
+}
+
+/* BUTTON STYLE */
 
 .btn {
   background-color: #e2b000;
@@ -176,6 +186,7 @@ button[disabled] {
 }
 
 /* <========== breakpoints ==========> */
+
 @media (max-width: 768px) {
   html {
       font-size: 75%;
@@ -197,7 +208,7 @@ button[disabled] {
 
 @media (max-width: 460px) {
   form {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
   }  
 }

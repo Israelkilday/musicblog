@@ -19,15 +19,8 @@
 .edit_post .image_preview {
     border-radius: 15px;
     box-shadow: 0 0 1em #333333;
-    max-width: 600px;
-    max-height: 500px;
+    width: 100%;
     margin-bottom: 1em;
 } 
 
-/* <========== breakpoints ==========> */
 
-    @media (max-width: 850px) {
-        .edit_post .image_preview {
-            width: 100%;
-        }
-    }
