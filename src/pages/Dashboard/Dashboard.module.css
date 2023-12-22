@@ -68,6 +68,10 @@
 @media (max-width: 768px) {
     .dashboard {
         width: auto;
+    }   
+
+    .dashboard p {
+        font-size: 1.1em;
     }
     
     .post_header span {
@@ -88,7 +92,7 @@
     }
 
     .post_row p {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .post_row button {
