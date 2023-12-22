@@ -83,6 +83,10 @@
     .noposts p {
         margin-bottom: 3em;
     }
+
+    .dashboard p {
+        font-size: 1.2em;
+    }
 }
 
 @media (max-width: 500px) {
