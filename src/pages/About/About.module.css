@@ -55,4 +55,8 @@
     .about_content {
         width: auto;
     }
+
+    .about p {
+        font-size: 1.2em;
+    }
 }
