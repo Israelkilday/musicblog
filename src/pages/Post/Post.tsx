@@ -22,7 +22,7 @@ const Post = () => {
 
                     <div className={styles.tags}>
                         {post.tagsArray.map((tag: string) => (
-                            <p key={tag}><span>#</span>{tag}</p>
+                            <p key={tag} className={styles.tags_p}><span>#</span>{tag}</p>
                         ))}
                     </div>
                 </> 

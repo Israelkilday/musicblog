@@ -6,7 +6,7 @@
     border-radius: 15px;
     max-width: 600px;
     max-height: 500px;
-    box-shadow: 0 0 1em #333333;
+    box-shadow: 0 0 .6em #666666;
 }
 
 .post_detail .tags {
@@ -22,9 +22,12 @@
 }
 
 .tags p {
-    color: #fff;
+    background-color:#222222;
+    border-radius: .5em;
+    color: #CCCCCC;
     margin-right: .5em;
-    margin-bottom: .1em;
+    margin-bottom: .3em;
+    padding: .4rem;
 }
 
 .tags span {
@@ -42,8 +45,7 @@
 
 @media (max-width: 768px) {
     .post_detail {
-        width:  100%;
-        
+        width:  100%;        
     }
 
     .post_detail img {
@@ -60,8 +62,6 @@
         width: 100%;
     }
 }
-
-
 
 @media (max-width: 460px) {
     .tags p {
