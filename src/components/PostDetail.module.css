@@ -32,6 +32,8 @@
 .post_box h2 {
     margin-bottom: .4em;
     font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .tags p {
