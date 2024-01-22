@@ -18,7 +18,7 @@
 
 .edit_post .image_preview {
     border-radius: 15px;
-    box-shadow: 0 0 1em #333333;
+    box-shadow: 0 0 .4em #666666;
     width: 100%;
     margin-bottom: 1em;
 } 

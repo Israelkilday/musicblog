@@ -1,24 +1,37 @@
 .post_detail {
-    margin-bottom: 2.5em;
-}
-
-.post_detail img {
-    border-radius: 15px;
-    max-width: 600px;
-    max-height: 500px;
-    box-shadow: 0 0 .6em #666666;
-}
-
-.post_detail .tags {
+    align-items: center;
     display: flex;
+    max-width: 300px;    
+}
+
+.post_box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.post_box img {
+    box-shadow: 0 0 .4em #666666;
+    border-radius: 15px;
+    height: 260px;
+    max-width: 100%;
+    object-fit: fill;
+    transition: .5s ease;
+}
+
+.post_box img:hover {
+    transform: scale(1.1);
+} 
+
+.post_box .tags {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 1.4em;
-    width: 60%;
+    width: 100%;
 }
 
-.post_detail h2 {
+.post_box h2 {
     margin-bottom: .4em;
+    font-size: 1.3em;
 }
 
 .tags p {
@@ -27,7 +40,8 @@
     color: #CCCCCC;
     margin-right: .5em;
     margin-bottom: .3em;
-    padding: .4rem;
+    padding: .3rem;
+    font-size: 1em;
 }
 
 .tags span {
@@ -35,23 +49,19 @@
 }
 
 .created_by {
-    font-style: italic;
     color: #b47c00;
+    font-style: italic;
     font-size:  1em;
     margin-bottom: .9em;    
+}
+
+.box_see_post {
+    margin-top: 1em;
 }
 
 /* <========== breakpoints ==========> */
 
 @media (max-width: 768px) {
-    .post_detail {
-        width:  100%;        
-    }
-
-    .post_detail img {
-        width: 100%;
-    }
-
     .post_detail .tags {
         width: auto;
     }

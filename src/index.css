@@ -82,7 +82,6 @@ nav button:hover {
 form {
   border-radius: 10px;
   box-shadow: #f2ff7c 0 0 .4em;
-  backdrop-filter: blur(30px);
   max-width: 40%;
   margin: 0 auto;
   padding: 1.5rem;
@@ -187,6 +186,10 @@ button[disabled] {
   html {
       font-size: 75%;
   }
+
+  .btn.btn_dark {
+    width: 50%;
+  }
 }
 
 @media (max-width: 550px) {
@@ -207,6 +210,10 @@ button[disabled] {
     max-width: 90%;
     margin: 0 auto;
   }  
+
+  .btn.btn_dark {
+    width: 100%;
+  }
 }
 
 

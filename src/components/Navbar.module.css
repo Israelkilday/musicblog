@@ -1,7 +1,6 @@
 .header {
     align-items: center;
-    box-shadow: #f2ff7c 0px -2px 10px 0px;
-    background-color: #161616;
+    background-color: #09090b;
     display: flex;
     font-weight: bold;
     justify-content: space-between;

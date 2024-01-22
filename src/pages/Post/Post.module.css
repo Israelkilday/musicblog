@@ -20,7 +20,7 @@
 }
 
 .post_container img {
-    box-shadow: 0 0 1em #333333;
+    box-shadow: 0 0 .4em #666666;
     border-radius: 15px;
     max-width: 540px;
     max-height: 440px;
