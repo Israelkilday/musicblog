@@ -16,8 +16,6 @@ interface PostDetailProps {
 const PostDetail: React.FC<PostDetailProps> = ({ post }) => {
   return (
     <div className={styles.post_detail}>
-      {/* <img src={post.image} alt={post.title} /> */}
-
       <div className={styles.post_box}>
         <img src={post.image} alt={post.title} />
         <h2>{post.title}</h2>
@@ -33,7 +31,7 @@ const PostDetail: React.FC<PostDetailProps> = ({ post }) => {
         </div>
         
           <Link to={`/posts/${post.id}`} className="btn btn_outline">
-            Ler
+            Visualizar
           </Link>
       </div>
     </div>
