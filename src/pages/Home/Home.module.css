@@ -11,7 +11,7 @@
     bottom: 5em;
     display: flex;
     flex-direction: column;
-    height: 23em;
+    height: 24em;
     position: relative;
     padding: 0 10em;
     text-align: center;
@@ -141,27 +141,23 @@
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 465px) {
     .search_form input {
         margin-bottom: 2em;
         width: 100%;
     }
 
-    .header_home h1 {
-        font-size: 2.5em;
-    } 
-
     .header_home p {
         margin-bottom: 2em;
     }
-}
 
-@media (max-width: 460px) {
     .header_home h1 {
         font-size: 2.2em;
     }
 
     .home .header_home {
-        height: 21em;
+        height: 23em;
     }
 }
+
+
