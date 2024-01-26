@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const About = () => {
     return (
         <div className={styles.about}>
-            <h2>Sobre o Music <span>Blog</span></h2>
+            <h2>Sobre o Music <span>BLOG</span></h2>
 
             <div className={styles.about_content}>
                 <p>

@@ -2,8 +2,21 @@
     text-align: center;
 }
 
-.login h1 {
+.login .icon_user {
+    height: 9em;
     margin-bottom: 1em;
+    transition: .5s;
+    width: 9em;
+}
+
+.login .icon_user:hover {
+    transform: scale(1.1);
+}
+
+.login h1 {
+    margin-bottom: .5em;
+    font-size: 3em;
+    font-weight: bold;
 }
 
 .login p {

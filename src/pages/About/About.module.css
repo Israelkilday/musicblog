@@ -7,11 +7,13 @@
 }
 
 .about h2 {
+    font-size: 2.5em;
     margin-bottom: 1.5em;
 }
 
 .about span {
-    font-weight: 900;
+    color: #fffe00;
+    font-weight: bold;
 }
 
 .about_content {

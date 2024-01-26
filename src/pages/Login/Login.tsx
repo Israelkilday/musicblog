@@ -3,6 +3,8 @@ import styles from "./Login.module.css"
 // HOOKS
 import { useEffect, useState } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
+// REACT ICONS
+import { FaUserCircle } from "react-icons/fa";
 
 const Login = () => {
   const [email, setEmail] = useState<string>("");
@@ -33,8 +35,12 @@ const Login = () => {
 
   return (
     <div className={styles.login}>
-      <h1>Entrar</h1>
+      <FaUserCircle className={styles.icon_user} />
+
+      <h1>Login</h1>
+
       <p>Faça o login para poder ultilizar o sistema</p>
+      
       <form onSubmit={handleSubmit}>
         <label>
           <span>E-mail:</span>
