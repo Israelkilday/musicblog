@@ -40,8 +40,7 @@
 
 @media (max-width: 991px) {
     .footer {
-        height: 100px;
-        padding: 2em 3%;
+        height: 150px;
     }
 }
 
