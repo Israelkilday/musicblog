@@ -3,15 +3,32 @@
     background-color: #09090b;
     display: flex;
     flex-direction: column;
-    gap: 0.8em;
-    height: 130px;
+    gap: .8em;
+    height: 180px;
     justify-content: center;
+    padding-top: 1em;
     width: 100%;
 }
-
-.footer h3 {
-    padding-top: 1em;
+.footer
+.box_footer_icons {
+    display: flex;
+    gap: 1em;
 }
+
+.footer 
+.footer_icons {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+ .footer_icons
+ .linkedin,
+ .github,
+ .instagram,
+ .email {
+    font-size: 2em;
+ }
 
 /* <========== breakpoints ==========> */
 

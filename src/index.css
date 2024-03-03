@@ -172,11 +172,6 @@ textarea {
   transition: all .3s;
 }
 
-.btn.btn_danger:hover {
-  background-color: #dc3545;
-  color: #fff;
-}
-
 button[disabled] {
   background-color: #946100;
   color: #f6ffbc;

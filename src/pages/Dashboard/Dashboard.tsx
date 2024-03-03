@@ -43,9 +43,7 @@ const Dashboard = () => {
           {posts &&
             posts.map((post) => (
               <div key={post.id} className={styles.post_row}>
-                <div>
                   <p>{post.title}</p>
-                </div>
 
                 <div>
                   <Link to={`/posts/${post.id}`} className="btn btn_outline">
@@ -57,7 +55,8 @@ const Dashboard = () => {
                   </Link>
 
                   <button onClick={() => deleteDocument(post.id)}
-                    className="btn btn_outline btn_danger"
+                    // className="btn btn_outline btn_danger"
+                    className={styles.btn_danger}
                   >
                     Excluir
                   </button>
