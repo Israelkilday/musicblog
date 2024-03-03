@@ -8,6 +8,11 @@
     width: 60%;
 }
 
+.loading {
+    font-size: 1em;
+    font-weight: bold;
+}
+
 .dashboard h2 {
     font-size: 3em;
     margin-bottom: .5em;

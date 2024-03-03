@@ -6,20 +6,22 @@
     display: flex;
     justify-content: center;
     max-width: 380px;
-    padding: 1em 1em 1.5em;
+    padding: 1em 1em 1em;
 }
 
 .post_box {
+    border-radius: 1em;
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: hidden;
 }
 
 .post_box img {
     border-radius: 15px;
     height: 260px;
     object-fit: cover;
-    transition: .5s ease;
+    transition: .3s ease;
     width: 100%;
 }
 
@@ -44,6 +46,10 @@
     width: 50%;
 }
 
+.tags {
+    margin-bottom: .9em;
+}
+
 .tags p {
     background-color:#222222;
     border-radius: .5em;
@@ -62,6 +68,7 @@
     color: #b47c00;
     font-style: italic;
     font-size:  1em;
+    font-weight: bold;
     margin-bottom: .9em;    
 }
 
