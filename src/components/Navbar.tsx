@@ -7,6 +7,8 @@ import { useAuthentication } from "../hooks/useAuthentication";
 import { useAnimationMenu } from "../hooks/useAnimationMenu";
 // CONTEXT
 import { userAuthValue } from "../context/AuthContext";
+// REACT ICONS
+import { HiMiniPlayPause } from "react-icons/hi2";
 
 const Navbar = () => {
     const { user } = userAuthValue();
@@ -18,7 +20,9 @@ const Navbar = () => {
     return (
         <header className={styles.header}>
             <NavLink to="/" className={styles.brand}>
+            <HiMiniPlayPause className={styles.icon} />
                 Music <span>Blog</span>
+                <HiMiniPlayPause className={styles.icon2} />
             </NavLink>
 
             <nav>

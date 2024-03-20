@@ -13,7 +13,6 @@ const Footer = () => {
 
       <div className={styles.box_footer_icons} >
           
-        
         <div className={styles.footer_icons}>
           <NavLink to="https://www.linkedin.com/in/israeldevfrontend">
             <FaLinkedin className={styles.linkedin} />
