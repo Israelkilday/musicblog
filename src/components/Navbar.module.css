@@ -23,11 +23,15 @@
 
 .brand .icon {
     transform: rotate(180deg);
-    font-size: xx-large;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 .brand .icon2 {
-    font-size: xx-large;
+    font-size: 1.7rem;
+    font-weight: bold;
+    
+    
 }
 
 .brand span {
@@ -139,6 +143,14 @@
         font-size: 1.3em;
     }  
   }
+  
+  @media (max-width: 768px) {
+    .header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }    
+  }
+  
 
   @media (max-width: 460px) {
     .brand {

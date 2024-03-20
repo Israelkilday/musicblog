@@ -28,11 +28,13 @@
 
 .brand .icon {
     transform: rotate(180deg);
-    font-size: xx-large;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 .brand .icon2 {
-    font-size: xx-large;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 .brand span {
