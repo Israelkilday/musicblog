@@ -1,171 +1,163 @@
 .home {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    
-    padding: 0 1em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1em;
 }
 
 .home .header_home {
-    background: #09090b;
-    bottom: 5em;
-    display: flex;
-    flex-direction: column;
-    height: 24em;
-    position: relative;
-    padding: 0 10em;
-    text-align: center;
-    width: 100vw;
+  background: #09090b;
+  bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  height: 24em;
+  position: relative;
+  padding: 0 10em;
+  text-align: center;
+  width: 100vw;
 }
 
 .header_home h1 {
-    font-size: 3.5em;
-    margin: 2em 0 .5em  ;
+  font-size: 3.5em;
+  margin: 2em 0 0.5em;
 }
 
 .header_home p {
-    color: #fafafa;
-    font-size: 1.1em;
-    margin-bottom: 2.5em;
-    text-align: center;
+  color: #fafafa;
+  font-size: 1.1em;
+  margin-bottom: 2.5em;
+  text-align: center;
 }
 
 .header_home .header_icons {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
 }
 
-.header_icons
- .linkedin,
- .github,
- .instagram,
- .email {
-    font-size: 2em;
- }
+.header_icons .linkedin,
+.github,
+.instagram,
+.email {
+  font-size: 2em;
+}
 
-.home h2 {
-    font-size: 2em;
-    margin-bottom:  2em;
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
 
 .search_form {
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-    margin-bottom: 3em;
-    padding-top: 2em;
-    width: 60%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3em;
+  padding-top: 0;
+  width: 60%;
 }
 
 .search_form input {
-    margin-right: 10px;
-    width: 70%;
+  margin-right: 10px;
+  width: 70%;
 }
 
 .grid_posts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
 }
 
 .noposts {
-    text-align: center;
+  text-align: center;
 }
 
 .noposts p {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .noposts a {
-    padding: 10px 25px;
+  padding: 10px 25px;
 }
 
 /* <========== breakpoints ==========> */
-
 @media (max-width: 820px) {
-    .header_home h1 {
-        font-size: 3em;
-    }
+  .header_home h1 {
+    font-size: 3em;
+  }
 }
 
-@media (max-width: 850px) {
-    .home {
-        margin: 0 auto;
-    }
+@media (max-width: 768px) {
+  .home {
+    margin: 0 auto;
+  }
 
-    h2 {
-        text-align: center;
-    }
+  h2 {
+    text-align: center;
+  }
 
-    .search_form {
-        align-items: center;
-        flex-direction: column;
-        width: 80%;
-    }
+  .home .header_home {
+    padding: 0 5em;
+  }
 
-    .home .header_home {
-        padding: 0 5em;
-    }
+  .search_form {
+    min-width: 50%;
+  }
 
-    .grid_posts {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .grid_posts img {
-        width: 600px;
-    }
+  .search_form input {
+    width: 100%;
+  }
+
+  .grid_posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid_posts img {
+    width: 600px;
+  }
 }
 
 @media (max-width: 596px) {
-    .home .header_home {
-        padding: 0 1em;
-    }
+  .home .header_home {
+    padding: 0 1em;
+  }
 }
 
 @media (max-width: 550px) {
-    .home {
-        margin: 0 2em;    
-    }
-    
-    .home .header_home {
-        width: 100vw;
-    }
+  .home {
+    margin: 0 2em;
+  }
 
-    .header_home h1 {
-        font-size: 2.8em;
-    }
+  .home .header_home {
+    width: 100vw;
+  }
 
-    .grid_posts {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .header_home h1 {
+    font-size: 2.8em;
+  }
+
+  .grid_posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
-@media (max-width: 465px) {
-    .home {
-        margin: 0 .1em;
-    }
+@media (max-width: 425px) {
+  .home {
+    margin: 0 0.1em;
+  }
 
-    .search_form {
-        width: 100%;
-    }
+  .search_form {
+    width: 100%;
+  }
 
-    .search_form input {
-        margin-bottom: 2em;
-        width: 100%;
-    }
+  .header_home p {
+    margin-bottom: 2em;
+  }
 
-    .header_home p {
-        margin-bottom: 2em;
-    }
+  .header_home h1 {
+    font-size: 2.2em;
+  }
 
-    .header_home h1 {
-        font-size: 2.2em;
-    }
-
-    .home .header_home {
-        height: 23em;
-    }
+  .home .header_home {
+    height: 23em;
+  }
 }
-
-
