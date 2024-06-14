@@ -1,16 +1,20 @@
-// CSS
-import styles from "./Footer.module.css"
-// REACT ROUTER DOM
+import styles from "./Footer.module.css";
 import { NavLink } from "react-router-dom";
-// REACT ICONS
 import { MdEmail } from "react-icons/md";
-import { FaLinkedin, FaGithub, FaInstagram, FaArrowUp, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaArrowUp,
+  FaWhatsapp,
+  FaPhoneAlt,
+} from "react-icons/fa";
 import { HiMiniPlayPause } from "react-icons/hi2";
 
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 };
 
@@ -19,8 +23,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <h3 className={styles.h3_footer}>ESCREVA SOBRE A SUA BANDA FAVORITA!</h3>
       <div className={styles.box_footer}>
-        <div className={styles.box_footer_icons} >
-
+        <div className={styles.box_footer_icons}>
           <NavLink to="/" className={styles.brand}>
             <HiMiniPlayPause className={styles.icon} />
             Music <span>Blog</span>
@@ -46,14 +49,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div >
+        <div>
           <h3>INSTITUCIONAL</h3>
           <p>FAQs</p>
           <p>Sobre o MusicBlog</p>
           <p>Política de segurança e privacidade</p>
         </div>
 
-        <div >
+        <div>
           <h3>DEPARTAMENTOS</h3>
           <p>Forums</p>
           <p>Afiliados</p>
@@ -75,7 +78,10 @@ const Footer = () => {
       </div>
 
       <div className={styles.end_footer}>
-        <p className={styles.p_end_footer}>&copy; 2023 ISRAEL KILDAY<br/> Todos os direitos reservados</p>
+        <p className={styles.p_end_footer}>
+          &copy; 2023 ISRAEL KILDAY
+          <br /> Todos os direitos reservados
+        </p>
 
         <div onClick={scrollToTop} className={styles.arrow_up}>
           <FaArrowUp />
