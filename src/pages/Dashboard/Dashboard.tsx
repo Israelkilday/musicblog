@@ -1,24 +1,24 @@
-// CSS
-import styles from "./Dashboard.module.css"
-// REACT-ROUTER-DOM
-import { Link } from "react-router-dom"
-// CONTEXT
+import styles from "./Dashboard.module.css";
+import { Link } from "react-router-dom";
 import { userAuthValue } from "../../context/AuthContext";
-// HOOKS
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import { useDeleteDocument } from "../../hooks/useDeleteDocument";
 
 const Dashboard = () => {
-  const { user} = userAuthValue();
+  const { user } = userAuthValue();
 
-  const uid = user?.uid
+  const uid = user?.uid;
 
-  const { documents: posts, loading } = useFetchDocuments({docCollection: "posts", search: null, uid});
+  const { documents: posts, loading } = useFetchDocuments({
+    docCollection: "posts",
+    search: null,
+    uid,
+  });
 
   const { deleteDocument } = useDeleteDocument("posts");
 
   if (loading) {
-    return <p>Carregando...</p>
+    return <p>Carregando...</p>;
   }
 
   return (
@@ -43,19 +43,22 @@ const Dashboard = () => {
           {posts &&
             posts.map((post) => (
               <div key={post.id} className={styles.post_row}>
-                  <p>{post.title}</p>
+                <p>{post.title}</p>
 
                 <div>
                   <Link to={`/posts/${post.id}`} className="btn btn_outline">
                     Ver
                   </Link>
 
-                  <Link to={`/posts/edit/${post.id}`} className="btn btn_outline">
+                  <Link
+                    to={`/posts/edit/${post.id}`}
+                    className="btn btn_outline"
+                  >
                     Editar
                   </Link>
 
-                  <button onClick={() => deleteDocument(post.id)}
-                    // className="btn btn_outline btn_danger"
+                  <button
+                    onClick={() => deleteDocument(post.id)}
                     className={styles.btn_danger}
                   >
                     Excluir
