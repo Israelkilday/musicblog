@@ -12,7 +12,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Search from "./pages/Search/Search";
 import Post from "./pages/Post/Post";
 import EditPost from "./pages/EditPost/EditPost";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { AuthProvider } from "./context/AuthContext";
 import ScrollTop from "./components/ScrollTop";
@@ -39,7 +39,7 @@ function App() {
       <AuthProvider value={{ user }}>
         <BrowserRouter>
           <ScrollTop />
-          <Navbar />
+          {/* <Navbar /> */}
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
