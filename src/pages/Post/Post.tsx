@@ -24,28 +24,31 @@ const Post = () => {
 
       {post && (
         <section className={styles.post_container}>
-          <div className={styles.image}>
-            <img src={post.image} alt={post.title} />
+          <div>
+            <div className={styles.image}>
+              <img src={post.image} alt={post.title} />
 
-            <button onClick={handleBackClick}>
-              <IoChevronBackCircle className={styles.button_back} />
-            </button>
+              <button className={styles.button_back} onClick={handleBackClick}>
+                <IoChevronBackCircle />
+              </button>
+            </div>
+
+            <div className={styles.tags}>
+              {post.tagsArray.map((tag: string) => (
+                <p key={tag} className={styles.tags_p}>
+                  <span>#</span>
+                  {tag}
+                </p>
+              ))}
+            </div>
           </div>
 
-          <h3>Este post trata sobre:</h3>
+          {/* <h3>Este post trata sobre:</h3> */}
+          <div>
+            <h1 className={styles.title}>{post.title}</h1>
 
-          <div className={styles.tags}>
-            {post.tagsArray.map((tag: string) => (
-              <p key={tag} className={styles.tags_p}>
-                <span>#</span>
-                {tag}
-              </p>
-            ))}
+            <p className={styles.post_body}>{post.body}</p>
           </div>
-
-          <h1>{post.title}</h1>
-
-          <p style={{ padding: "0 2em" }}>{post.body}</p>
         </section>
       )}
     </>
