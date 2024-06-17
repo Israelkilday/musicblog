@@ -18,6 +18,7 @@ const Post = () => {
   return (
     <>
       {loading && <p className={styles.post_load}>Carregando Post...</p>}
+
       <div className={styles.navbar}>
         <Navbar />
       </div>
@@ -43,7 +44,6 @@ const Post = () => {
             </div>
           </div>
 
-          {/* <h3>Este post trata sobre:</h3> */}
           <div>
             <h1 className={styles.title}>{post.title}</h1>
 

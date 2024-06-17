@@ -1,5 +1,5 @@
-// CSS 
-import styles from "./PostDetail.module.css"
+// CSS
+import styles from "./PostDetail.module.css";
 // REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ interface PostDetailProps {
     createdBy: string;
     tagsArray: string[];
   };
-};
+}
 
 const PostDetail: React.FC<PostDetailProps> = ({ post }) => {
   return (
@@ -23,16 +23,16 @@ const PostDetail: React.FC<PostDetailProps> = ({ post }) => {
 
         <div className={styles.tags}>
           {post.tagsArray.map((tag) => (
-            <p key={tag}>
+            <p className={styles.tags_p} key={tag}>
               <span>#</span>
               {tag}
             </p>
           ))}
         </div>
-        
-          <Link to={`/posts/${post.id}`} className="btn btn_outline">
-            Visualizar
-          </Link>
+
+        <Link to={`/posts/${post.id}`} className="btn btn_outline">
+          Visualizar
+        </Link>
       </div>
     </div>
   );

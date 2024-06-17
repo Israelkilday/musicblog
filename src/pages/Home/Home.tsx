@@ -5,6 +5,8 @@ import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import PostDetail from "../../components/PostDetail";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import Navbar from "../../components/Navbar";
+import { IoIosSearch } from "react-icons/io";
 
 const Home = () => {
   const [query, setQuery] = useState<string>("");
@@ -23,47 +25,57 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.home}>
+    <section className={styles.home}>
+      <div className={styles.navbar}>
+        <Navbar />
+      </div>
+
       <div className={styles.header_home}>
-        <h1>Bem vindo ao Music Blog</h1>
+        <div>
+          <h1 className={styles.title_header}>Bem vindo ao Music Blog</h1>
 
-        <p className={styles.p_header_home}>
-          Sua voz importa! Este é o lugar para compartilhar suas experiências
-          musicais, desde memórias de shows inesquecíveis até descobertas de
-          artistas promissores. Sinta-se à vontade para expressar sua paixão
-          pela música!
-        </p>
+          <p className={styles.p_header_home}>
+            Sua voz importa! Este é o lugar para compartilhar suas experiências
+            musicais, desde memórias de shows inesquecíveis até descobertas de
+            artistas promissores. Sinta-se à vontade para expressar sua paixão
+            pela música!
+          </p>
 
-        <div className={styles.header_icons}>
-          <NavLink to="https://www.linkedin.com/in/israeldevfrontend">
-            <FaLinkedin className={styles.linkedin} />
-          </NavLink>
+          <div className={styles.header_icons}>
+            <NavLink to="https://www.linkedin.com/in/israeldevfrontend">
+              <FaLinkedin className={styles.linkedin} />
+            </NavLink>
 
-          <NavLink to="https://github.com/Israelkilday">
-            <FaGithub className={styles.github} />
-          </NavLink>
+            <NavLink to="https://github.com/Israelkilday">
+              <FaGithub className={styles.github} />
+            </NavLink>
 
-          <NavLink to="https://www.instagram.com/israelkilday/">
-            <FaInstagram className={styles.instagram} />
-          </NavLink>
+            <NavLink to="https://www.instagram.com/israelkilday/">
+              <FaInstagram className={styles.instagram} />
+            </NavLink>
 
-          <a href="mailto:israel.kilday@yahoo.com.br">
-            <MdEmail className={styles.email} />
-          </a>
+            <a href="mailto:israel.kilday@yahoo.com.br">
+              <MdEmail className={styles.email} />
+            </a>
+          </div>
         </div>
       </div>
 
-      <h2>Veja os nossos posts mais recents!</h2>
+      <section className={styles.search_session}>
+        <h2>Veja os nossos posts mais recents!</h2>
 
-      <form onSubmit={handleSubmit} className={styles.search_form}>
-        <input
-          type="text"
-          required
-          placeholder="Ou busque por tags..."
-          onChange={(e) => setQuery(e.target.value.toLocaleLowerCase())}
-        />
-        <button className="btn btn_dark">Pesquisar</button>
-      </form>
+        <form onSubmit={handleSubmit} className={styles.search_form}>
+          <input
+            type="text"
+            required
+            placeholder="Ou busque por tags..."
+            onChange={(e) => setQuery(e.target.value.toLocaleLowerCase())}
+          />
+          <button className={styles.button_icon}>
+            <IoIosSearch className={styles.search_icon} />
+          </button>
+        </form>
+      </section>
 
       <div className={styles.grid_posts}>
         {loading && <p>Carregando...</p>}
@@ -78,7 +90,7 @@ const Home = () => {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
