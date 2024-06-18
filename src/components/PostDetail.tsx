@@ -1,6 +1,4 @@
-// CSS
 import styles from "./PostDetail.module.css";
-// REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
 
 interface PostDetailProps {

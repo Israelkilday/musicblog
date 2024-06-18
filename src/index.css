@@ -52,7 +52,7 @@ span {
 input::placeholder,
 textarea::placeholder {
   color: #aaa;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
 }
 
 input:focus,

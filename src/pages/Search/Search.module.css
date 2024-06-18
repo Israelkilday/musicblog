@@ -1,35 +1,42 @@
-.search_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.section_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 9em 2em 0;
 }
 
-.search_container h2 {
-    margin-bottom: 1em;
+h2 {
+  font-size: 1.7em;
 }
 
-.search_container .search {
-    color: #fff;
-}
-
-.search_container p {
-    margin-bottom: 30px;
+.search {
+  font-size: 1em;
+  color: #fff;
 }
 
 .noposts {
-    text-align: center;
+  text-align: center;
+}
+
+.noposts p {
+  padding-bottom: 1em;
+}
+
+.grid_posts {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
 }
 
 /* <========== breakpoints ==========> */
 
 @media (max-width: 768px) {
-    .search_container {
-        min-height: 50vh;
-    }
-    
-    .noposts p {
-        font-size: 1.3em;
-    }
-}
+  .search_container {
+    min-height: 50vh;
+  }
 
+  .noposts p {
+    font-size: 1.3em;
+  }
+}

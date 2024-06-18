@@ -25,12 +25,12 @@ const Home = () => {
   };
 
   return (
-    <section className={styles.home}>
+    <main className={styles.home}>
       <div className={styles.navbar}>
         <Navbar />
       </div>
 
-      <div className={styles.header_home}>
+      <section className={styles.header_home}>
         <div>
           <h1 className={styles.title_header}>Bem vindo ao Music Blog</h1>
 
@@ -59,7 +59,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
       <section className={styles.search_session}>
         <h2>Veja os nossos posts mais recents!</h2>
@@ -77,7 +77,7 @@ const Home = () => {
         </form>
       </section>
 
-      <div className={styles.grid_posts}>
+      <section className={styles.grid_posts}>
         {loading && <p>Carregando...</p>}
         {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
 
@@ -89,8 +89,8 @@ const Home = () => {
             </Link>
           </div>
         )}
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
 
