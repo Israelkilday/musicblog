@@ -44,7 +44,7 @@ const Post = () => {
             </div>
           </div>
 
-          <div>
+          <div className={styles.body_content}>
             <h1 className={styles.title}>{post.title}</h1>
 
             <p className={styles.post_body}>{post.body}</p>
