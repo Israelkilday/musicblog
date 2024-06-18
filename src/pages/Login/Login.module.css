@@ -1,30 +1,32 @@
 .login {
-    text-align: center;
+  text-align: center;
+  padding-top: 11em;
+  padding-bottom: 2em;
 }
 
 .login .icon_user {
-    height: 9em;
-    margin-bottom: 1em;
-    transition: .5s;
-    width: 9em;
+  height: 9em;
+  margin-bottom: 1em;
+  transition: 0.5s;
+  width: 9em;
 }
 
 .login .icon_user:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .login h1 {
-    margin-bottom: .5em;
-    font-size: 3em;
-    font-weight: bold;
+  margin-bottom: 0.5em;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .login p {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 @media (max-width: 768px) {
-    .login p {
-        font-size: 1.2em;
-    }    
-} 
+  .login p {
+    font-size: 1.2em;
+  }
+}

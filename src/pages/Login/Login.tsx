@@ -2,6 +2,7 @@ import styles from "./Login.module.css";
 import { useEffect, useState } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
 import { FaUserCircle } from "react-icons/fa";
+import Navbar from "../../components/Navbar";
 
 const Login = () => {
   const [email, setEmail] = useState<string>("");
@@ -31,48 +32,54 @@ const Login = () => {
   }, [authError]);
 
   return (
-    <div className={styles.login}>
-      <FaUserCircle className={styles.icon_user} />
+    <section>
+      <div className={styles.navbar}>
+        <Navbar />
+      </div>
 
-      <h1>Login</h1>
+      <div className={styles.login}>
+        <FaUserCircle className={styles.icon_user} />
 
-      <p>Faça o login para poder ultilizar o sistema</p>
+        <h1>Login</h1>
 
-      <form onSubmit={handleSubmit}>
-        <label>
-          <span>E-mail:</span>
-          <input
-            type="email"
-            name="email"
-            autoComplete="on"
-            required
-            placeholder="E-mail do usúario"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-          />
-        </label>
+        <p>Faça o login para poder ultilizar o sistema</p>
 
-        <label>
-          <span>Senha:</span>
-          <input
-            type="password"
-            name="password"
-            autoComplete="on"
-            required
-            placeholder="Insira sua senha"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-          />
-        </label>
-        {!loading && <button className="btn">Entrar</button>}
-        {loading && (
-          <button className="btn" disabled>
-            Aguarde...
-          </button>
-        )}
-        {error && <p className="error">{error}</p>}
-      </form>
-    </div>
+        <form onSubmit={handleSubmit}>
+          <label>
+            <span>E-mail:</span>
+            <input
+              type="email"
+              name="email"
+              autoComplete="on"
+              required
+              placeholder="E-mail do usúario"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+          </label>
+
+          <label>
+            <span>Senha:</span>
+            <input
+              type="password"
+              name="password"
+              autoComplete="on"
+              required
+              placeholder="Insira sua senha"
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+            />
+          </label>
+          {!loading && <button className="btn">Entrar</button>}
+          {loading && (
+            <button className="btn" disabled>
+              Aguarde...
+            </button>
+          )}
+          {error && <p className="error">{error}</p>}
+        </form>
+      </div>
+    </section>
   );
 };
 
