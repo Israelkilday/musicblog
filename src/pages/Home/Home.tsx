@@ -32,7 +32,7 @@ const Home = () => {
 
       <section className={styles.header_home}>
         <div>
-          <h1 className={styles.title_header}>Bem vindo ao Music Blog</h1>
+          <h1 className={styles.title_header}>Bem vindo ao Music BLOG</h1>
 
           <p className={styles.p_header_home}>
             Sua voz importa! Este é o lugar para compartilhar suas experiências

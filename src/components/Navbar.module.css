@@ -48,7 +48,7 @@
 }
 
 .links_list {
-  display: flex;
+  display: none;
   list-style: none;
 }
 
@@ -87,14 +87,22 @@
 
 /* <========== breakpoints ==========> */
 
+@media (min-width: 1024px) {
+  .links_list {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .btn_menu {
+    display: block;
+  }
+}
+
 @media (max-width: 767px) {
   .header {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .btn_menu {
-    display: block;
   }
 
   .btn_menu.active .bar:nth-child(1) {
@@ -149,9 +157,6 @@
   .links_list button {
     font-size: 1.3em;
   }
-}
-
-@media (min-width: 768px) {
 }
 
 @media (max-width: 460px) {

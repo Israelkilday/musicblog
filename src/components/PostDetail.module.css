@@ -54,6 +54,7 @@
 .tags p {
   background-color: #222222;
   border-radius: 0.5em;
+  border: #161616 solid 0.1em;
   color: #cccccc;
   font-size: 1em;
   margin-right: 0.5em;
@@ -63,7 +64,8 @@
 }
 
 .tags p:hover {
-  background-color: #444444;
+  background: none;
+  border: #666666 solid 0.1em;
 }
 
 .tags span {
@@ -88,7 +90,7 @@
   }
 
   .tags p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 }
 

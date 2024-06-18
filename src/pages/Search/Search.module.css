@@ -32,11 +32,11 @@ h2 {
 /* <========== breakpoints ==========> */
 
 @media (max-width: 768px) {
-  .search_container {
-    min-height: 50vh;
-  }
-
   .noposts p {
     font-size: 1.3em;
   }
+}
+
+@media (min-width: 768px) {
+  padding: 0;
 }

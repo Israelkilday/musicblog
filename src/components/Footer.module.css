@@ -1,6 +1,6 @@
-footer {
+.footer {
   background-color: #1a1b1f;
-  padding: 55px 55px 1em;
+  padding: 55px 7em 1em;
   width: 100%;
   height: 100%;
 }
@@ -100,17 +100,7 @@ footer {
 }
 
 /* <========== breakpoints ==========> */
-@media (min-width: 1024px) {
-  footer {
-    padding: 3em 7em;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 2em 2em 1em;
-  }
-
+@media (max-width: 1024px) {
   .box_footer {
     flex-direction: column;
   }
@@ -118,6 +108,12 @@ footer {
   .h3_footer {
     justify-content: flex-start;
     margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 2.5em 2em 1em;
   }
 
   .box_footer_icons {
