@@ -16,7 +16,7 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 600;
   gap: 4px;
 }
@@ -87,7 +87,12 @@
 
 /* <========== breakpoints ==========> */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .btn_menu {
     display: block;
   }
@@ -146,11 +151,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .header {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+@media (min-width: 768px) {
 }
 
 @media (max-width: 460px) {

@@ -85,13 +85,18 @@ footer {
 .footer .end_footer .arrow_up {
   display: flex;
   cursor: pointer;
-  font-size: large;
+  font-size: 1.2em;
   align-items: center;
   color: #e2b000;
-  padding: 12px;
+  padding: 0.6em;
   font-weight: bold;
   border-radius: 0.8em;
   border: 1px solid #4e525b;
+  transition: all 0.2s ease;
+}
+
+.footer .end_footer .arrow_up:hover {
+  background-color: #4e525b;
 }
 
 /* <========== breakpoints ==========> */
