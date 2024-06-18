@@ -127,7 +127,7 @@ form input::placeholder {
   margin-top: 1em;
   padding: 10px 15px;
   text-align: center;
-  width: 120px;
+  width: 100%;
   transition: all 0.3s;
 }
 
@@ -204,13 +204,5 @@ button[disabled] {
 
   .btn {
     font-size: 1em;
-    width: 100%;
   }
 }
-
-/* @media (max-width: 460px) {
-  form {
-    max-width: 95%;
-    margin: 0 auto;
-  }
-} */

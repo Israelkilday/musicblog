@@ -48,7 +48,7 @@
 }
 
 .links_list {
-  display: none;
+  display: flex;
   list-style: none;
 }
 
@@ -93,16 +93,14 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .btn_menu {
-    display: block;
-  }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .btn_menu {
+    display: block;
   }
 
   .btn_menu.active .bar:nth-child(1) {

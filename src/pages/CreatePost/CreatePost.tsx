@@ -53,6 +53,7 @@ const CreatePost = () => {
       <div className={styles.navbar}>
         <Navbar />
       </div>
+
       <div className={styles.create_post}>
         <h2>Criar Post</h2>
         <p>

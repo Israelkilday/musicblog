@@ -1,9 +1,6 @@
-// CSS
-import styles from "./Login.module.css"
-// HOOKS
+import styles from "./Login.module.css";
 import { useEffect, useState } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
-// REACT ICONS
 import { FaUserCircle } from "react-icons/fa";
 
 const Login = () => {
@@ -14,13 +11,13 @@ const Login = () => {
   const { login, error: authError, loading } = useAuthentication();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     setError("");
 
     const user = {
       email,
-      password
-    }
+      password,
+    };
 
     const res = await login(user);
 
@@ -40,7 +37,7 @@ const Login = () => {
       <h1>Login</h1>
 
       <p>Faça o login para poder ultilizar o sistema</p>
-      
+
       <form onSubmit={handleSubmit}>
         <label>
           <span>E-mail:</span>
@@ -80,5 +77,3 @@ const Login = () => {
 };
 
 export default Login;
-
-

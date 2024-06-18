@@ -14,14 +14,15 @@
 }
 
 .dashboard h2 {
-  font-size: 3em;
+  font-size: 2.5em;
   margin-bottom: 0.5em;
+  padding-top: 3.5em;
 }
 
 .dashboard p {
   color: #b47c00;
   line-height: 1.3;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .noposts {
@@ -98,15 +99,19 @@
   .post_header span {
     margin: auto;
   }
-}
 
-@media (max-width: 768px) {
   .noposts p {
     margin-bottom: 3em;
   }
 
   .dashboard p {
     font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard h2 {
+    padding-top: 4em;
   }
 }
 
