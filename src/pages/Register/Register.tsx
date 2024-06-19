@@ -1,6 +1,7 @@
 import styles from "./Register.module.css";
 import { useState, useEffect } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
+import Navbar from "../../components/Navbar";
 
 const Register = () => {
   const [displayName, setDisplayName] = useState<string>("");
@@ -38,69 +39,75 @@ const Register = () => {
   }, [authError]);
 
   return (
-    <div className={styles.register}>
-      <h1>Cadastre-se para postar</h1>
-      <p>Crie seu usuário e compartilhe sua banda favorita!</p>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <span>Nome:</span>
-          <input
-            type="text"
-            name="displayName"
-            required
-            placeholder="Nome do usúario"
-            onChange={(e) => setDisplayName(e.target.value)}
-            value={displayName}
-          />
-        </label>
+    <section>
+      <div className={styles.navbar}>
+        <Navbar />
+      </div>
 
-        <label>
-          <span>E-mail:</span>
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="E-mail do usúario"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-          />
-        </label>
+      <div className={styles.register}>
+        <h1>Cadastre-se para postar</h1>
+        <p>Crie seu usuário e compartilhe sua banda favorita!</p>
+        <form onSubmit={handleSubmit}>
+          <label>
+            <span>Nome:</span>
+            <input
+              type="text"
+              name="displayName"
+              required
+              placeholder="Nome do usúario"
+              onChange={(e) => setDisplayName(e.target.value)}
+              value={displayName}
+            />
+          </label>
 
-        <label>
-          <span>Senha:</span>
-          <input
-            type="password"
-            name="password"
-            required
-            placeholder="Insira sua senha"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-          />
-        </label>
+          <label>
+            <span>E-mail:</span>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="E-mail do usúario"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+          </label>
 
-        <label>
-          <span>Confirmaçaõ de senha:</span>
-          <input
-            type="password"
-            name="confirmPassword"
-            required
-            placeholder="Confirme sua senha"
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            value={confirmPassword}
-          />
-        </label>
+          <label>
+            <span>Senha:</span>
+            <input
+              type="password"
+              name="password"
+              required
+              placeholder="Insira sua senha"
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+            />
+          </label>
 
-        {!loading && <button className="btn">Cadastrar</button>}
+          <label>
+            <span>Confirmaçaõ de senha:</span>
+            <input
+              type="password"
+              name="confirmPassword"
+              required
+              placeholder="Confirme sua senha"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              value={confirmPassword}
+            />
+          </label>
 
-        {loading && (
-          <button className="btn" disabled>
-            Aguarde...
-          </button>
-        )}
+          {!loading && <button className="btn">Cadastrar</button>}
 
-        {error && <p className="error">{error}</p>}
-      </form>
-    </div>
+          {loading && (
+            <button className="btn" disabled>
+              Aguarde...
+            </button>
+          )}
+
+          {error && <p className="error">{error}</p>}
+        </form>
+      </div>
+    </section>
   );
 };
 

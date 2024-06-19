@@ -74,7 +74,7 @@ h2 {
   padding: 0 1em;
   color: #fafafa;
   height: 3em;
-  width: 70%;
+  width: 82%;
   transition: all ease 0.1s;
 }
 
@@ -139,7 +139,7 @@ h2 {
 
   .search_form input {
     height: 3em;
-    width: 53%;
+    width: 83%;
   }
 
   .grid_posts {
@@ -175,7 +175,7 @@ h2 {
     font-size: 1em;
     padding: 0 1em;
     height: 2.5em;
-    width: 39%;
+    width: 85%;
   }
 
   .button_icon {

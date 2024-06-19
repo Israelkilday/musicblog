@@ -60,7 +60,7 @@ const CreatePost = () => {
           Escreva e compartilhe sobre sua banda, artista ou musica favorita!
         </p>
 
-        <form onSubmit={handleSubmit}>
+        <form className={styles.search_form} onSubmit={handleSubmit}>
           <label>
             <span>Título</span>
             <input

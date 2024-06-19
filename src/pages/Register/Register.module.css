@@ -1,19 +1,20 @@
 .register {
-    text-align: center;
+  text-align: center;
+  padding-bottom: 2em;
 }
 
 .register h1 {
-    margin-bottom: .5em;
-    font-size: 2.5em;
+  padding-top: 4em;
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
 }
 
 .register p {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 @media (max-width: 768px) {
-    .register p {
-        font-size: 1.2em;
-    }
+  .register p {
+    font-size: 1.2em;
+  }
 }
-
