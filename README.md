@@ -4,9 +4,20 @@
  O objetivo é criar Posts falando de música em geral, aproveitei para iniciar o Blog postando sobre algumas de minhas bandas favoritas, mais sinta-se a vontade para postar sobre 
  qualquer estilo musical!
 
- ## 🎨 Layout 💻 && 📱 Mobile  
+ ## 🎨 Layout do Projeto
+ 
+<div align="center"><br>
+ 
+![c3f45534-1d81-46fd-9482-6060a688adf2](https://github.com/Israelkilday/musicblog/assets/101229204/466b4a60-175f-447f-950a-0d29542f2c8f)
+![61a55ae7-37e1-4f4d-ad0b-8b78f2f13958](https://github.com/Israelkilday/musicblog/assets/101229204/302aa8cd-1e40-4b02-86a2-cf48111c70de)
 
-https://github.com/Israelkilday/musicblog/assets/101229204/4c5c6199-1979-4ac8-9877-063d273e41c7
+
+</div>
+
+## Fluxograma da Aplicação
+
+![Untitled diagram-2024-06-19-225248](https://github.com/Israelkilday/musicblog/assets/101229204/02d990bc-c03c-4f5b-93be-1d8b242f5964)
+
  
  ## ⚙️ Pré-requisitos
 
