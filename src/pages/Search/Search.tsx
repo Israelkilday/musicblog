@@ -37,23 +37,6 @@ const Search = () => {
           </div>
         )}
       </section>
-      {/* <div>
-        {posts && posts.length === 0 && (
-          <div className={styles.noposts}>
-            <p className={styles.p_search}>
-              Não foram encontardos posts apartir da sua busca...
-            </p>
-            <Link to="/" className="btn btn_dark">
-              Voltar
-            </Link>
-          </div>
-        )}
-
-        <div className={styles.search_post}>
-          {posts &&
-            posts.map((post) => <PostDetail key={post.id} post={post} />)}
-        </div>
-      </div> */}
     </div>
   );
 };
