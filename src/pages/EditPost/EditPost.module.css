@@ -1,26 +1,82 @@
 .edit_post {
-    text-align: center;
+  text-align: center;
 }
 
 .edit_post h2 {
-    font-size: 2.2em;
-    margin-bottom: 1em;
-} 
+  font-size: 2em;
+  padding-top: 4em;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.post_title {
+  font-size: 1em;
+  color: #fff;
+}
 
 .edit_post p {
-    margin-bottom: 2em;
+  margin-bottom: 1.3em;
+  font-size: 1.1em;
 }
 
 .edit_post .preview_title {
-    font-weight: bold;
-    margin-bottom: 0.3em;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.search_form {
+  border-radius: 1.5em;
+  font-family: "Poppins", sans-serif;
+  box-shadow: inset 0 -0.4em 0.4em -0.2em #666666;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1.5em 1.5em;
+  background-color: #111111;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+label span {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  text-align: left;
+}
+
+.search_form input,
+textarea {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 1px solid;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.8em 0;
+}
+
+form input::placeholder {
+  text-indent: 0.4em;
 }
 
 .edit_post .image_preview {
-    border-radius: 15px;
-    box-shadow: 0 0 .4em #666666;
-    width: 100%;
-    margin-bottom: 1em;
-} 
+  border-radius: 15px;
+  box-shadow: 0 0 0.4em #666666;
+  width: 100%;
+  margin-bottom: 1em;
+}
 
+@media (min-width: 768px) {
+  .edit_post h2 {
+    padding-top: 5em;
+  }
+}
 
+@media (min-width: 768px) {
+  .edit_post {
+    padding-bottom: 2em;
+  }
+}

@@ -86,7 +86,6 @@
 }
 
 /* <========== breakpoints ==========> */
-
 @media (max-width: 768px) {
   .dashboard {
     width: auto;
