@@ -13,6 +13,7 @@
 .create_post p {
   color: #b47c00;
   margin-bottom: 2em;
+  padding: 0 1em;
 }
 
 .search_form {
