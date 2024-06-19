@@ -30,7 +30,7 @@ const About = () => {
             Obrigado pela visita!
           </p>
         </div>
-        <Link to="/posts/create" className={styles.btn_about}>
+        <Link to="/posts/create" className="btn">
           Criar Post
         </Link>
       </div>
