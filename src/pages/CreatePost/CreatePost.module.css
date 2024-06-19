@@ -1,6 +1,6 @@
 .create_post {
   text-align: center;
-  padding-bottom: 2em;
+  padding-top: 3em;
 }
 
 .create_post h2 {
@@ -69,14 +69,14 @@ form input::placeholder {
   form {
     width: 60%;
   }
-
-  .create_post h2 {
-    padding-top: 4em;
-  }
 }
 
 @media (min-width: 1024px) {
   form {
     width: 40%;
+  }
+
+  .create_post {
+    padding-bottom: 2em;
   }
 }
