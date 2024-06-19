@@ -44,7 +44,7 @@ const Login = () => {
 
         <p>Faça o login para poder ultilizar o sistema</p>
 
-        <form onSubmit={handleSubmit}>
+        <form className={styles.search_form} onSubmit={handleSubmit}>
           <label>
             <span>E-mail:</span>
             <input

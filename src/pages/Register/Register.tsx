@@ -47,7 +47,7 @@ const Register = () => {
       <div className={styles.register}>
         <h1>Cadastre-se para postar</h1>
         <p>Crie seu usuário e compartilhe sua banda favorita!</p>
-        <form onSubmit={handleSubmit}>
+        <form className={styles.search_form} onSubmit={handleSubmit}>
           <label>
             <span>Nome:</span>
             <input
