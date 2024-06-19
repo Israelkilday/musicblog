@@ -5,7 +5,7 @@
 
 .create_post h2 {
   text-align: center;
-  padding-top: 3em;
+  padding: 3em 2em 0;
   font-size: 2.5em;
   margin-bottom: 0.5em;
 }
