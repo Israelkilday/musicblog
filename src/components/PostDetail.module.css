@@ -37,7 +37,7 @@
 }
 
 .post_box h2 {
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: bold;
   margin-bottom: 0.4em;
   text-transform: uppercase;
@@ -45,6 +45,11 @@
 
 .post_box a {
   width: 50%;
+}
+
+.created_by {
+  color: #666666;
+  margin-bottom: 0.9em;
 }
 
 .tags {
@@ -70,12 +75,6 @@
 
 .tags span {
   font-weight: bold;
-}
-
-.created_by {
-  color: #b47c00;
-  font-size: 1em;
-  margin-bottom: 0.9em;
 }
 
 .box_see_post {
